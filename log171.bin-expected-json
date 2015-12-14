@@ -1,0 +1,3510 @@
+{
+  "bytes-dropped": 0, 
+  "duration": "987654321", 
+  "evilness": 1529, 
+  "format-version": "0.1", 
+  "git_version": "some-hash", 
+  "maximum-altitude-absolute": 604.3900146484375, 
+  "maximum-altitude-absolute-units": "metres", 
+  "maximum-altitude-relative": 15.30999755859375, 
+  "maximum-altitude-relative-units": "metres", 
+  "maximum-distance-from-origin": 82.98495461380755, 
+  "maximum-distance-from-origin-units": "metres", 
+  "maximum-velocity": 14.62117776074582, 
+  "maximum-velocity-units": "metres/second", 
+  "packet-count": 91530, 
+  "packet_count": 91530, 
+  "severity-score": 1529, 
+  "tests": {
+    "Altitude Estimate Divergence": {
+      "description": "A UAV often has several estimates of its Altitude.  This test will FAIL or WARN if the various vehicle's Altitude estimates diverge", 
+      "evilness": 80, 
+      "evilness-is-deprecated": 1, 
+      "name": "Altitude Estimate Divergence", 
+      "results": [
+        {
+          "duration": 47.45299911499023, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=1892.849941 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "name": "GPS", 
+          "reason": "This altitude estimate differs from the canonical craft altitude", 
+          "series": [
+            "GPS.Alt"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 13902000, 
+          "timestamp_stop": 61355000
+        }, 
+        {
+          "duration": 0.5040000081062317, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=5.783020 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "name": "EKF1", 
+          "reason": "This altitude estimate differs from the canonical craft altitude", 
+          "series": [
+            "EKF1.PD"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 83852000, 
+          "timestamp_stop": 84356000
+        }, 
+        {
+          "duration": 1.177999973297119, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=-5.079956 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "name": "GPS", 
+          "reason": "This altitude estimate differs from the canonical craft altitude", 
+          "series": [
+            "GPS.Alt"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 91517000, 
+          "timestamp_stop": 92695000
+        }, 
+        {
+          "duration": 5.328000068664551, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=-16.343872 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "name": "EKF1", 
+          "reason": "This altitude estimate differs from the canonical craft altitude", 
+          "series": [
+            "EKF1.PD"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 240087000, 
+          "timestamp_stop": 245415000
+        }
+      ], 
+      "severity-score": 80, 
+      "status": "FAIL"
+    }, 
+    "Any Parameters Seen": {
+      "description": "Autopilots store information on-board in the form of parameters.  For proper analysis, logs must contain this parameter information.  This test will FAIL if the input does not contain parameter information.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Any Parameters Seen", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Parameters seen", 
+          "series": [
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Arming Checks": {
+      "description": "An autopilot checks many aspects of the aircraft's state before allowing it to be armed - for example, that it has a good GPS fix.  This test will FAIL if the craft ever arms when some arming checks are disabled", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Arming Checks", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Attitude Control": {
+      "description": "The autopilot reports both the craft's attitude and the attitude the craft believes it should be at.  This test will FAIL or WARN if the vehicle's desired attitudes and achieved attitudes are not within threshold delta values for more than a threshold time.", 
+      "evilness": 270, 
+      "evilness-is-deprecated": 1, 
+      "name": "Attitude Control", 
+      "results": [
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=7.610000 degrees", 
+            "Roll-at-Max-Delta=7.070000 degrees", 
+            "Desired-Roll-at-Max-Delta=6.690000 degrees", 
+            "Pitch-at-Max-Delta=0.900000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-6.710000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 86775000, 
+          "timestamp_stop": 87078000
+        }, 
+        {
+          "duration": 0.5040000081062317, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=10.120000 degrees", 
+            "Roll-at-Max-Delta=3.030000 degrees", 
+            "Desired-Roll-at-Max-Delta=3.130000 degrees", 
+            "Pitch-at-Max-Delta=-2.830000 degrees", 
+            "Desired-Pitch-at-Max-Delta=7.290000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 2 clipping low", 
+            "Motor 3 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 93230000, 
+          "timestamp_stop": 93734000
+        }, 
+        {
+          "duration": 0.6039999723434448, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=15.919999 degrees", 
+            "Roll-at-Max-Delta=0.750000 degrees", 
+            "Desired-Roll-at-Max-Delta=-0.110000 degrees", 
+            "Pitch-at-Max-Delta=18.629999 degrees", 
+            "Desired-Pitch-at-Max-Delta=2.710000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 3 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 94138000, 
+          "timestamp_stop": 94742000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=5.410000 degrees", 
+            "Roll-at-Max-Delta=-0.250000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.110000 degrees", 
+            "Pitch-at-Max-Delta=-9.200000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-3.790000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 94944000, 
+          "timestamp_stop": 95246000
+        }, 
+        {
+          "duration": 0.5040000081062317, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=16.320000 degrees", 
+            "Roll-at-Max-Delta=1.290000 degrees", 
+            "Desired-Roll-at-Max-Delta=1.060000 degrees", 
+            "Pitch-at-Max-Delta=14.610000 degrees", 
+            "Desired-Pitch-at-Max-Delta=30.930000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 98471000, 
+          "timestamp_stop": 98975000
+        }, 
+        {
+          "duration": 0.4040000140666962, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=14.410000 degrees", 
+            "Roll-at-Max-Delta=1.300000 degrees", 
+            "Desired-Roll-at-Max-Delta=1.250000 degrees", 
+            "Pitch-at-Max-Delta=21.139999 degrees", 
+            "Desired-Pitch-at-Max-Delta=6.730000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 99378000, 
+          "timestamp_stop": 99782000
+        }, 
+        {
+          "duration": 0.4040000140666962, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=14.469999 degrees", 
+            "Roll-at-Max-Delta=1.890000 degrees", 
+            "Desired-Roll-at-Max-Delta=2.100000 degrees", 
+            "Pitch-at-Max-Delta=8.340000 degrees", 
+            "Desired-Pitch-at-Max-Delta=22.809999 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 100995000, 
+          "timestamp_stop": 101399000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=7.840001 degrees", 
+            "Roll-at-Max-Delta=0.460000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.440000 degrees", 
+            "Pitch-at-Max-Delta=-0.680000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-8.520000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 104021000, 
+          "timestamp_stop": 104323000
+        }, 
+        {
+          "duration": 0.4029999971389771, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=8.119999 degrees", 
+            "Roll-at-Max-Delta=1.940000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.280000 degrees", 
+            "Pitch-at-Max-Delta=-19.639999 degrees", 
+            "Desired-Pitch-at-Max-Delta=-11.520000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 104525000, 
+          "timestamp_stop": 104928000
+        }, 
+        {
+          "duration": 0.4050000011920929, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=11.770000 degrees", 
+            "Roll-at-Max-Delta=1.170000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.710000 degrees", 
+            "Pitch-at-Max-Delta=10.300000 degrees", 
+            "Desired-Pitch-at-Max-Delta=22.070000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 112087000, 
+          "timestamp_stop": 112492000
+        }, 
+        {
+          "duration": 0.3009999990463257, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=10.370000 degrees", 
+            "Roll-at-Max-Delta=7.290000 degrees", 
+            "Desired-Roll-at-Max-Delta=-3.080000 degrees", 
+            "Pitch-at-Max-Delta=-1.450000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-2.480000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 121484000, 
+          "timestamp_stop": 121785000
+        }, 
+        {
+          "duration": 0.4020000100135803, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=18.259998 degrees", 
+            "Roll-at-Max-Delta=-0.070000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.200000 degrees", 
+            "Pitch-at-Max-Delta=11.300000 degrees", 
+            "Desired-Pitch-at-Max-Delta=29.559999 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 124813000, 
+          "timestamp_stop": 125215000
+        }, 
+        {
+          "duration": 0.503000020980835, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=29.820000 degrees", 
+            "Roll-at-Max-Delta=2.640000 degrees", 
+            "Desired-Roll-at-Max-Delta=4.590000 degrees", 
+            "Pitch-at-Max-Delta=7.300000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-22.520000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 2 clipping low", 
+            "Motor 3 clipping low", 
+            "Motor 4 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 126325000, 
+          "timestamp_stop": 126828000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=6.170000 degrees", 
+            "Roll-at-Max-Delta=0.750000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.620000 degrees", 
+            "Pitch-at-Max-Delta=-4.670000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-10.840000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 137114000, 
+          "timestamp_stop": 137416000
+        }, 
+        {
+          "duration": 0.5059999823570251, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=12.890000 degrees", 
+            "Roll-at-Max-Delta=-5.680000 degrees", 
+            "Desired-Roll-at-Max-Delta=2.280000 degrees", 
+            "Pitch-at-Max-Delta=-8.850000 degrees", 
+            "Desired-Pitch-at-Max-Delta=4.040000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 3 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 147600000, 
+          "timestamp_stop": 148106000
+        }, 
+        {
+          "duration": 0.6029999852180481, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=10.820000 degrees", 
+            "Roll-at-Max-Delta=-16.469999 degrees", 
+            "Desired-Roll-at-Max-Delta=-20.840000 degrees", 
+            "Pitch-at-Max-Delta=18.660000 degrees", 
+            "Desired-Pitch-at-Max-Delta=7.840000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 148308000, 
+          "timestamp_stop": 148911000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=6.740000 degrees", 
+            "Roll-at-Max-Delta=3.100000 degrees", 
+            "Desired-Roll-at-Max-Delta=3.920000 degrees", 
+            "Pitch-at-Max-Delta=7.350000 degrees", 
+            "Desired-Pitch-at-Max-Delta=14.090000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 151229000, 
+          "timestamp_stop": 151531000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=8.530000 degrees", 
+            "Roll-at-Max-Delta=1.070000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.940000 degrees", 
+            "Pitch-at-Max-Delta=13.050000 degrees", 
+            "Desired-Pitch-at-Max-Delta=21.580000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 154756000, 
+          "timestamp_stop": 155059000
+        }, 
+        {
+          "duration": 0.8090000152587891, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=16.840000 degrees", 
+            "Roll-at-Max-Delta=1.680000 degrees", 
+            "Desired-Roll-at-Max-Delta=1.270000 degrees", 
+            "Pitch-at-Max-Delta=-2.830000 degrees", 
+            "Desired-Pitch-at-Max-Delta=14.010000 degrees", 
+            "Motor 2 clipping low", 
+            "Motor 4 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 157789000, 
+          "timestamp_stop": 158598000
+        }, 
+        {
+          "duration": 0.6060000061988831, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=12.770000 degrees", 
+            "Roll-at-Max-Delta=-0.590000 degrees", 
+            "Desired-Roll-at-Max-Delta=-0.240000 degrees", 
+            "Pitch-at-Max-Delta=16.830000 degrees", 
+            "Desired-Pitch-at-Max-Delta=4.060000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 158800000, 
+          "timestamp_stop": 159406000
+        }, 
+        {
+          "duration": 0.6060000061988831, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=7.110000 degrees", 
+            "Roll-at-Max-Delta=12.460000 degrees", 
+            "Desired-Roll-at-Max-Delta=19.570000 degrees", 
+            "Pitch-at-Max-Delta=-5.650000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-6.570000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 173116000, 
+          "timestamp_stop": 173722000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=7.410000 degrees", 
+            "Roll-at-Max-Delta=11.810000 degrees", 
+            "Desired-Roll-at-Max-Delta=4.400000 degrees", 
+            "Pitch-at-Max-Delta=-7.550000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-7.450000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 174327000, 
+          "timestamp_stop": 174629000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=9.690001 degrees", 
+            "Roll-at-Max-Delta=-11.260000 degrees", 
+            "Desired-Roll-at-Max-Delta=-1.570000 degrees", 
+            "Pitch-at-Max-Delta=-5.810000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-5.340000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 175334000, 
+          "timestamp_stop": 175637000
+        }, 
+        {
+          "duration": 0.6039999723434448, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=14.859999 degrees", 
+            "Roll-at-Max-Delta=-3.200000 degrees", 
+            "Desired-Roll-at-Max-Delta=-0.920000 degrees", 
+            "Pitch-at-Max-Delta=17.530001 degrees", 
+            "Desired-Pitch-at-Max-Delta=32.389999 degrees", 
+            "Motor 3 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 176847000, 
+          "timestamp_stop": 177451000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=13.369999 degrees", 
+            "Roll-at-Max-Delta=2.130000 degrees", 
+            "Desired-Roll-at-Max-Delta=1.150000 degrees", 
+            "Pitch-at-Max-Delta=19.730000 degrees", 
+            "Desired-Pitch-at-Max-Delta=6.360000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 177854000, 
+          "timestamp_stop": 178157000
+        }, 
+        {
+          "duration": 0.6050000190734863, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=8.220000 degrees", 
+            "Roll-at-Max-Delta=0.670000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.500000 degrees", 
+            "Pitch-at-Max-Delta=-0.940000 degrees", 
+            "Desired-Pitch-at-Max-Delta=7.280000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 178358000, 
+          "timestamp_stop": 178963000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=6.970000 degrees", 
+            "Roll-at-Max-Delta=1.110000 degrees", 
+            "Desired-Roll-at-Max-Delta=0.950000 degrees", 
+            "Pitch-at-Max-Delta=10.310000 degrees", 
+            "Desired-Pitch-at-Max-Delta=17.280001 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 183101000, 
+          "timestamp_stop": 183404000
+        }, 
+        {
+          "duration": 0.4029999971389771, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=10.670000 degrees", 
+            "Roll-at-Max-Delta=1.380000 degrees", 
+            "Desired-Roll-at-Max-Delta=1.170000 degrees", 
+            "Pitch-at-Max-Delta=6.920000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-3.750000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 183808000, 
+          "timestamp_stop": 184211000
+        }, 
+        {
+          "duration": 0.4029999971389771, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=12.420000 degrees", 
+            "Roll-at-Max-Delta=9.900000 degrees", 
+            "Desired-Roll-at-Max-Delta=22.320000 degrees", 
+            "Pitch-at-Max-Delta=-2.960000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-2.740000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 186942000, 
+          "timestamp_stop": 187345000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=11.639999 degrees", 
+            "Roll-at-Max-Delta=5.480000 degrees", 
+            "Desired-Roll-at-Max-Delta=-6.160000 degrees", 
+            "Pitch-at-Max-Delta=-0.900000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-1.470000 degrees"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 188555000, 
+          "timestamp_stop": 188857000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=8.000000 degrees", 
+            "Roll-at-Max-Delta=2.000000 degrees", 
+            "Desired-Roll-at-Max-Delta=2.770000 degrees", 
+            "Pitch-at-Max-Delta=7.280000 degrees", 
+            "Desired-Pitch-at-Max-Delta=15.280000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 189965000, 
+          "timestamp_stop": 190268000
+        }, 
+        {
+          "duration": 0.4020000100135803, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=5.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=8.510000 degrees", 
+            "Roll-at-Max-Delta=-2.250000 degrees", 
+            "Desired-Roll-at-Max-Delta=-10.760000 degrees", 
+            "Pitch-at-Max-Delta=0.000000 degrees", 
+            "Desired-Pitch-at-Max-Delta=-0.390000 degrees"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 233136000, 
+          "timestamp_stop": 233538000
+        }, 
+        {
+          "duration": 0.7059999704360962, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=348.520020 degrees", 
+            "Roll-at-Max-Delta=-173.960007 degrees", 
+            "Desired-Roll-at-Max-Delta=174.559998 degrees", 
+            "Pitch-at-Max-Delta=-44.240002 degrees", 
+            "Desired-Pitch-at-Max-Delta=-14.350000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 2 clipping low", 
+            "Motor 3 clipping low", 
+            "Motor 4 clipping low"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239079000, 
+          "timestamp_stop": 239785000
+        }, 
+        {
+          "duration": 14.1850004196167, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=10.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "Max-Delta=336.270020 degrees", 
+            "Roll-at-Max-Delta=178.820007 degrees", 
+            "Desired-Roll-at-Max-Delta=-157.449997 degrees", 
+            "Pitch-at-Max-Delta=-2.900000 degrees", 
+            "Desired-Pitch-at-Max-Delta=23.600000 degrees", 
+            "Motor 1 clipping low", 
+            "Motor 2 clipping high", 
+            "Motor 3 clipping high", 
+            "Motor 3 failed", 
+            "Motor 4 clipping high", 
+            "Motor 4 failed"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Desired attitude not achieved", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "ATT.DesRoll", 
+            "ATT.DesPitch", 
+            "ATT.DesYaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239886000, 
+          "timestamp_stop": 254071000
+        }
+      ], 
+      "severity-score": 270, 
+      "status": "FAIL"
+    }, 
+    "Attitude Estimate Divergence": {
+      "description": "A UAV often has several estimates of its Attitude.  This test will FAIL or WARN if the various vehicle's Attitude estimates diverge", 
+      "evilness": 20, 
+      "evilness-is-deprecated": 1, 
+      "name": "Attitude Estimate Divergence", 
+      "results": [
+        {
+          "duration": 2.311000108718872, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=162.200001 degrees", 
+            "delta-threshold=10.000000 degrees", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "name": "AHR2", 
+          "reason": "This attitude estimate differs from the canonical craft attitude", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "AHR2.Roll", 
+            "AHR2.Pitch", 
+            "AHR2.Yaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239785000, 
+          "timestamp_stop": 242096000
+        }, 
+        {
+          "duration": 11.47700023651123, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=22.930000 degrees", 
+            "delta-threshold=10.000000 degrees", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "name": "AHR2", 
+          "reason": "This attitude estimate differs from the canonical craft attitude", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "AHR2.Roll", 
+            "AHR2.Pitch", 
+            "AHR2.Yaw"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 242594000, 
+          "timestamp_stop": 254071000
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "AutoPilot Health": {
+      "description": "Many autopilots are capable of monitoring their own performance.  This test will FAIL if problems are detected with the autopilot", 
+      "evilness": 50, 
+      "evilness-is-deprecated": 1, 
+      "name": "AutoPilot Health", 
+      "results": [
+        {
+          "duration": 62.74399948120117, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "slices-threshold=5000", 
+            "slices-max-threshold=64561"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Severe scheduler overruns", 
+          "series": [
+            "MSG.NLon", 
+            "MSG.NLoop", 
+            "MSG.MaxT"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 20996000, 
+          "timestamp_stop": 83740000
+        }, 
+        {
+          "duration": 10.08199977874756, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "slices-threshold=5000", 
+            "slices-max-threshold=12010"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Severe scheduler overruns", 
+          "series": [
+            "MSG.NLon", 
+            "MSG.NLoop", 
+            "MSG.MaxT"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 124096000, 
+          "timestamp_stop": 134178000
+        }, 
+        {
+          "duration": 10.08300018310547, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "slices-threshold=5000", 
+            "slices-max-threshold=11996"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Severe scheduler overruns", 
+          "series": [
+            "MSG.NLon", 
+            "MSG.NLoop", 
+            "MSG.MaxT"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 164434000, 
+          "timestamp_stop": 174517000
+        }, 
+        {
+          "duration": 20.17099952697754, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "slices-threshold=5000", 
+            "slices-max-threshold=12933"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Severe scheduler overruns", 
+          "series": [
+            "MSG.NLon", 
+            "MSG.NLoop", 
+            "MSG.MaxT"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 194697000, 
+          "timestamp_stop": 214868000
+        }, 
+        {
+          "duration": 10.07900047302246, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "slices-threshold=5000", 
+            "slices-max-threshold=13247"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Severe scheduler overruns", 
+          "series": [
+            "MSG.NLon", 
+            "MSG.NLoop", 
+            "MSG.MaxT"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 224960000, 
+          "timestamp_stop": 235039000
+        }
+      ], 
+      "severity-score": 50, 
+      "status": "FAIL"
+    }, 
+    "Battery": {
+      "description": "Many autpilots are capable of monitoring their flight batteries.  This test will FAIL if the battery level falls below the battery failsafe threshold level, or if a battery failsafe event is received.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Battery", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Brownout": {
+      "description": "A log should not end while the vehicle appears to be moving under its own power.  This test will FAIL if the vehicle still appears to be moving when the log ends.", 
+      "evilness": 10, 
+      "evilness-is-deprecated": 1, 
+      "name": "Brownout", 
+      "results": [
+        {
+          "evidence": [
+            "Final altitude 593.229980 metres", 
+            "Takeoff altitude 592.429993 metres", 
+            "Final relative altitude 0.799988 metres", 
+            "Vehicle still flying"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Log ended while craft still flying", 
+          "series": [
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL"
+        }
+      ], 
+      "severity-score": 10, 
+      "status": "FAIL"
+    }, 
+    "Compass Offsets": {
+      "description": "Compass calibration process produces a set of parameters that specify expected compass discrepancies.  This test will WARN or FAIL depending on the degree that these compass offset parameters exceed specified thresholds.", 
+      "evilness": 10, 
+      "evilness-is-deprecated": 1, 
+      "name": "Compass Offsets", 
+      "results": [
+        {
+          "evidence": [
+            "COMPASS_OFS_X=-97.791557", 
+            "COMPASS_OFS_Y=118.109573", 
+            "COMPASS_OFS_Z=213.179993", 
+            "COMPASS_OFS 262.600011 >= 200.000000"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass offsets in parameters are out of bounds", 
+          "series": [
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 5, 
+          "status": "FAIL", 
+          "timestamp": 0
+        }, 
+        {
+          "evidence": [
+            "COMPASS_OFS2_X=-141.843353", 
+            "COMPASS_OFS2_Y=-67.991653", 
+            "COMPASS_OFS2_Z=-255.968048", 
+            "COMPASS_OFS2 300.436427 >= 200.000000"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass offsets in parameters are out of bounds", 
+          "series": [
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 5, 
+          "status": "FAIL", 
+          "timestamp": 0
+        }
+      ], 
+      "severity-score": 10, 
+      "status": "PASS"
+    }, 
+    "Compass Vector Length": {
+      "description": "The strength and direction of the Earth's magnetic field should be relatively constant and lay within certain thresholds.  This test will FAIL or WARN if the compass vector length exceeds the respective threshold.  Possible causes include flying near large metal objects.", 
+      "evilness": 285, 
+      "evilness-is-deprecated": 1, 
+      "name": "Compass Vector Length", 
+      "results": [
+        {
+          "duration": 71.65899658203125, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=577.585492"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 11477000, 
+          "timestamp_stop": 83136000
+        }, 
+        {
+          "duration": 74.1780014038086, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=785.871491"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 11477000, 
+          "timestamp_stop": 85655000
+        }, 
+        {
+          "duration": 0.4020000100135803, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=553.174475"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 85857000, 
+          "timestamp_stop": 86259000
+        }, 
+        {
+          "duration": 0.8080000281333923, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=580.107749"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 86360000, 
+          "timestamp_stop": 87168000
+        }, 
+        {
+          "duration": 1.412999987602234, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=798.535535"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 86259000, 
+          "timestamp_stop": 87672000
+        }, 
+        {
+          "duration": 0.9100000262260437, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=565.916072"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 87873000, 
+          "timestamp_stop": 88783000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=565.574045"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 89490000, 
+          "timestamp_stop": 89793000
+        }, 
+        {
+          "duration": 0.8059999942779541, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=595.031092"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 91002000, 
+          "timestamp_stop": 91808000
+        }, 
+        {
+          "duration": 0.4029999971389771, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=569.477831"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 93219000, 
+          "timestamp_stop": 93622000
+        }, 
+        {
+          "duration": 7.257999897003174, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1076.558870"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 92715000, 
+          "timestamp_stop": 99973000
+        }, 
+        {
+          "duration": 4.034999847412109, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1046.090818"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 100378000, 
+          "timestamp_stop": 104413000
+        }, 
+        {
+          "duration": 2.822999954223633, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=722.735083"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 104816000, 
+          "timestamp_stop": 107639000
+        }, 
+        {
+          "duration": 0.9070000052452087, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=577.256442"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 115911000, 
+          "timestamp_stop": 116818000
+        }, 
+        {
+          "duration": 17.76799964904785, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1143.700573"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 108949000, 
+          "timestamp_stop": 126717000
+        }, 
+        {
+          "duration": 15.72700023651123, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=828.035627"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 128028000, 
+          "timestamp_stop": 143755000
+        }, 
+        {
+          "duration": 2.11899995803833, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=581.894320"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 144561000, 
+          "timestamp_stop": 146680000
+        }, 
+        {
+          "duration": 0.4029999971389771, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=590.272818"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 147893000, 
+          "timestamp_stop": 148296000
+        }, 
+        {
+          "duration": 0.3009999990463257, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=593.986532"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 148398000, 
+          "timestamp_stop": 148699000
+        }, 
+        {
+          "duration": 0.9070000052452087, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=577.631370"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 149304000, 
+          "timestamp_stop": 150211000
+        }, 
+        {
+          "duration": 10.39099979400635, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1095.540506"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 147286000, 
+          "timestamp_stop": 157677000
+        }, 
+        {
+          "duration": 1.008000016212463, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=573.970383"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 173509000, 
+          "timestamp_stop": 174517000
+        }, 
+        {
+          "duration": 26.31999969482422, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1163.646424"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 158183000, 
+          "timestamp_stop": 184503000
+        }, 
+        {
+          "duration": 0.4040000140666962, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=565.510389"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 187939000, 
+          "timestamp_stop": 188343000
+        }, 
+        {
+          "duration": 7.769000053405762, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1010.150979"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 184806000, 
+          "timestamp_stop": 192575000
+        }, 
+        {
+          "duration": 0.3030000030994415, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=555.386352"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 223750000, 
+          "timestamp_stop": 224053000
+        }, 
+        {
+          "duration": 1.108999967575073, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=590.647949"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 228993000, 
+          "timestamp_stop": 230102000
+        }, 
+        {
+          "duration": 227.6920013427734, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=632.407305"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG.MagX", 
+            "MAG.MagY", 
+            "MAG.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 11477000, 
+          "timestamp_stop": 239169000
+        }, 
+        {
+          "duration": 46.79600143432617, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1336.587446"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 192676000, 
+          "timestamp_stop": 239472000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=648.899068"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239775000, 
+          "timestamp_stop": 240077000
+        }, 
+        {
+          "duration": 0.6039999723434448, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1242.592854"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239573000, 
+          "timestamp_stop": 240177000
+        }, 
+        {
+          "duration": 2.101000070571899, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=569.387390"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 240984000, 
+          "timestamp_stop": 243085000
+        }, 
+        {
+          "duration": 0.6039999723434448, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=562.753054"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 243389000, 
+          "timestamp_stop": 243993000
+        }, 
+        {
+          "duration": 14.09500026702881, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=675.661158"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG.MagX", 
+            "MAG.MagY", 
+            "MAG.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239976000, 
+          "timestamp_stop": 254071000
+        }, 
+        {
+          "duration": 9.472000122070312, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=550.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=577.226126"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 5, 
+          "status": "WARN", 
+          "timestamp_start": 244599000, 
+          "timestamp_stop": 254071000
+        }, 
+        {
+          "duration": 13.49100017547607, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "threshold=600.000000", 
+            "threshold-duration=0.250000 seconds", 
+            "length-max=1100.125902"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length above threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 240580000, 
+          "timestamp_stop": 254071000
+        }, 
+        {
+          "evidence": [
+            "shortest=409.909746", 
+            "longest=675.661158", 
+            "delta-percent=64.831689"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length delta exceeds threshold", 
+          "series": [
+            "MAG.MagX", 
+            "MAG.MagY", 
+            "MAG.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL"
+        }, 
+        {
+          "evidence": [
+            "shortest=375.154635", 
+            "longest=648.899068", 
+            "delta-percent=72.968426"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length delta exceeds threshold", 
+          "series": [
+            "MAG2.MagX", 
+            "MAG2.MagY", 
+            "MAG2.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL"
+        }, 
+        {
+          "evidence": [
+            "shortest=171.257117", 
+            "longest=1336.587446", 
+            "delta-percent=680.456586"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Compass Vector Length delta exceeds threshold", 
+          "series": [
+            "MAG3.MagX", 
+            "MAG3.MagY", 
+            "MAG3.MagZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL"
+        }
+      ], 
+      "severity-score": 285, 
+      "status": "FAIL"
+    }, 
+    "Crash Test": {
+      "description": "Crashes are detected both heuristically and by explicit log messages.  This test will FAIL if the vehicle appears to crash", 
+      "evilness": 200, 
+      "evilness-is-deprecated": 1, 
+      "name": "Crash Test", 
+      "results": [
+        {
+          "evidence": [
+            "ANGLE_MAX (fabs(39.599998) > 35.000000)", 
+            "SERVO_OUTPUT_RAW.servo1_raw=1497.000000", 
+            "SERVO_OUTPUT_RAW.servo2_raw=1534.000000", 
+            "SERVO_OUTPUT_RAW.servo3_raw=1455.000000", 
+            "SERVO_OUTPUT_RAW.servo4_raw=1446.000000"
+          ], 
+          "evilness": 100, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Vehicle is past maximum allowed angle and running its motors", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4", 
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 100, 
+          "status": "FAIL", 
+          "timestamp": 229004000
+        }, 
+        {
+          "evidence": [
+            "ANGLE_MAX (fabs(42.660000) > 35.000000)", 
+            "SERVO_OUTPUT_RAW.servo1_raw=1620.000000", 
+            "SERVO_OUTPUT_RAW.servo2_raw=1430.000000", 
+            "SERVO_OUTPUT_RAW.servo3_raw=1531.000000", 
+            "SERVO_OUTPUT_RAW.servo4_raw=1298.000000"
+          ], 
+          "evilness": 100, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Vehicle is past maximum allowed angle and running its motors", 
+          "series": [
+            "ATT.Roll", 
+            "ATT.Pitch", 
+            "ATT.Yaw", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4", 
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 100, 
+          "status": "FAIL", 
+          "timestamp": 238777000
+        }
+      ], 
+      "severity-score": 200, 
+      "status": "FAIL"
+    }, 
+    "Ever Armed": {
+      "description": "Vehicles typically need to progress through a sequence of arming steps before they can move.  This test will FAIL if the craft did not arm", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Ever Armed", 
+      "results": [
+        {
+          "evidence": [
+            "Armed at 72606000"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The vehicle armed", 
+          "series": [
+            "EV.Id"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS", 
+          "timestamp-first-armed": 72606000
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Ever Flew": {
+      "description": "Determining whether a vehicle has ever flown in a log is done heuristically based on things like motor speeds.  This test will FAIL if the craft did not ever seem to fly", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Ever Flew", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The vehicle appeared to fly", 
+          "series": [
+            "EV.Id", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS", 
+          "timestamp-first-flying": 82864000
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "GPS Fix": {
+      "description": "The accuracy and precision of GPS messages can vary depending on many factors including weather, ionospheric disturbances and number of satellites visible.  This test will FAIL if the quality of the GPS information is poor", 
+      "evilness": 20, 
+      "evilness-is-deprecated": 1, 
+      "name": "GPS Fix", 
+      "results": [
+        {
+          "duration": 33.39899826049805, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "satellites-visible: 0", 
+            "HDop: 99.99", 
+            "satellites-visible-threshold: 5", 
+            "HDop-threshold: 5.000000"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "No 3D fix was ever acquired", 
+          "series": [
+            "GPS.HDop", 
+            "GPS.NSats"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 11737000, 
+          "timestamp_stop": 45136000
+        }, 
+        {
+          "evidence": [
+            "first-fix-time=45.136002", 
+            "first-fix-time-units=seconds"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": 1, 
+          "reason": "First 3D GPS Fix Acquired", 
+          "series": [
+            "GPS.Status"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS", 
+          "timestamp": 45136000
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "Good EKF": {
+      "description": "The Extended Kalman filter has many built-in checks to ensure it is funcitoning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
+      "evilness": 564, 
+      "evilness-is-deprecated": 1, 
+      "name": "Good EKF", 
+      "results": [
+        {
+          "duration": 11.47799968719482, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=0", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 0, 
+          "timestamp_stop": 11478000
+        }, 
+        {
+          "duration": 3.438999891281128, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16384", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 11478000, 
+          "timestamp_stop": 14917000
+        }, 
+        {
+          "duration": 7.071000099182129, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16549", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 14917000, 
+          "timestamp_stop": 21988000
+        }, 
+        {
+          "duration": 4.98199987411499, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16384", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 21988000, 
+          "timestamp_stop": 26970000
+        }, 
+        {
+          "duration": 4.764999866485596, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16549", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 26970000, 
+          "timestamp_stop": 31735000
+        }, 
+        {
+          "duration": 4.238999843597412, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16384", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 31735000, 
+          "timestamp_stop": 35974000
+        }, 
+        {
+          "duration": 3.842000007629395, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16549", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 35974000, 
+          "timestamp_stop": 39816000
+        }, 
+        {
+          "duration": 6.260000228881836, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16384", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 39816000, 
+          "timestamp_stop": 46076000
+        }, 
+        {
+          "duration": 3.539000034332275, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16549", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 46076000, 
+          "timestamp_stop": 49615000
+        }, 
+        {
+          "duration": 0.7009999752044678, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=16384", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 49615000, 
+          "timestamp_stop": 50316000
+        }, 
+        {
+          "duration": 6.568999767303467, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=0", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 50316000, 
+          "timestamp_stop": 56885000
+        }, 
+        {
+          "duration": 4.369999885559082, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=165", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 56885000, 
+          "timestamp_stop": 61255000
+        }, 
+        {
+          "duration": 6.415999889373779, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=0", 
+            "attitude estimate bad", 
+            "horizontal velocity estimate bad", 
+            "vertical velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 61255000, 
+          "timestamp_stop": 67671000
+        }, 
+        {
+          "duration": 7.017000198364258, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=933", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad"
+          ], 
+          "evilness": 14, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 14, 
+          "status": "FAIL", 
+          "timestamp_start": 67671000, 
+          "timestamp_stop": 74688000
+        }, 
+        {
+          "duration": 10.17099952697754, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=2879", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 74688000, 
+          "timestamp_stop": 84859000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=6975", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 84859000, 
+          "timestamp_stop": 84960000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=2879", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 84960000, 
+          "timestamp_stop": 85061000
+        }, 
+        {
+          "duration": 0.3019999861717224, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 85061000, 
+          "timestamp_stop": 85363000
+        }, 
+        {
+          "duration": 0.1019999980926514, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=4927", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 85363000, 
+          "timestamp_stop": 85465000
+        }, 
+        {
+          "duration": 75.5530014038086, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 85465000, 
+          "timestamp_stop": 161018000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=4927", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 161018000, 
+          "timestamp_stop": 161119000
+        }, 
+        {
+          "duration": 2.013999938964844, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 161119000, 
+          "timestamp_stop": 163133000
+        }, 
+        {
+          "duration": 0.8069999814033508, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=4927", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 163133000, 
+          "timestamp_stop": 163940000
+        }, 
+        {
+          "duration": 0.8069999814033508, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 163940000, 
+          "timestamp_stop": 164747000
+        }, 
+        {
+          "duration": 0.7059999704360962, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=4927", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 164747000, 
+          "timestamp_stop": 165453000
+        }, 
+        {
+          "duration": 0.5040000081062317, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 165453000, 
+          "timestamp_stop": 165957000
+        }, 
+        {
+          "duration": 0.6050000190734863, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=4927", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 165957000, 
+          "timestamp_stop": 166562000
+        }, 
+        {
+          "duration": 0.2020000070333481, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=1.523483", 
+            "threshold=1.000000"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds fail threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 240087000, 
+          "timestamp_stop": 240289000
+        }, 
+        {
+          "duration": 0.1019999980926514, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=1.108197", 
+            "threshold=1.000000"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds fail threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 240389000, 
+          "timestamp_stop": 240491000
+        }, 
+        {
+          "duration": 0.2020000070333481, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.619758", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 240692000, 
+          "timestamp_stop": 240894000
+        }, 
+        {
+          "duration": 74.33200073242188, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 166562000, 
+          "timestamp_stop": 240894000
+        }, 
+        {
+          "duration": 3.009999990463257, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.810000", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "pos_vert_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SH"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 240793000, 
+          "timestamp_stop": 243803000
+        }, 
+        {
+          "duration": 3.413000106811523, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=3.074703", 
+            "threshold=1.000000"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds fail threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 240995000, 
+          "timestamp_stop": 244408000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.519038", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 244508000, 
+          "timestamp_stop": 244609000
+        }, 
+        {
+          "duration": 0.1000000014901161, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.548544", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 244710000, 
+          "timestamp_stop": 244810000
+        }, 
+        {
+          "duration": 5.125999927520752, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=3.090000", 
+            "threshold=1.000000"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "velocity_variance exceeds fail threshold", 
+          "series": [
+            "EKF4.SV"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 239785000, 
+          "timestamp_stop": 244911000
+        }, 
+        {
+          "duration": 0.2010000050067902, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.530377", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 245012000, 
+          "timestamp_stop": 245213000
+        }, 
+        {
+          "duration": 4.822999954223633, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=1.430000", 
+            "threshold=1.000000"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": 1, 
+          "reason": "pos_horiz_variance exceeds fail threshold", 
+          "series": [
+            "EKF4.SP"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "timestamp_start": 240491000, 
+          "timestamp_stop": 245314000
+        }, 
+        {
+          "duration": 0.2010000050067902, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.560981", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 245818000, 
+          "timestamp_stop": 246019000
+        }, 
+        {
+          "duration": 0.2010000050067902, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.575239", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 246120000, 
+          "timestamp_stop": 246321000
+        }, 
+        {
+          "duration": 2.318000078201294, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.637103", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 246422000, 
+          "timestamp_stop": 248740000
+        }, 
+        {
+          "duration": 8.24899959564209, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=17215", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 240894000, 
+          "timestamp_stop": 249143000
+        }, 
+        {
+          "duration": 0.4020000100135803, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.591946", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 248841000, 
+          "timestamp_stop": 249243000
+        }, 
+        {
+          "duration": 0.8050000071525574, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.570438", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 249344000, 
+          "timestamp_stop": 250149000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.527067", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 250250000, 
+          "timestamp_stop": 250351000
+        }, 
+        {
+          "duration": 0.2010000050067902, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.538981", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 250453000, 
+          "timestamp_stop": 250654000
+        }, 
+        {
+          "duration": 0.2020000070333481, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.536004", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 250754000, 
+          "timestamp_stop": 250956000
+        }, 
+        {
+          "duration": 0.1000000014901161, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.533760", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 251158000, 
+          "timestamp_stop": 251258000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.500899", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 251862000, 
+          "timestamp_stop": 251963000
+        }, 
+        {
+          "duration": 0.101000003516674, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.513615", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 252467000, 
+          "timestamp_stop": 252568000
+        }, 
+        {
+          "duration": 0.1000000014901161, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-variance=0.500100", 
+            "threshold=0.500000"
+          ], 
+          "evilness": 4, 
+          "evilness-is-deprecated": 1, 
+          "reason": "compass_variance exceeds warn threshold", 
+          "series": [
+            "EKF4.SMX", 
+            "EKF4.SMY", 
+            "EKF4.SMZ"
+          ], 
+          "severity-score": 4, 
+          "status": "WARN", 
+          "timestamp_start": 252770000, 
+          "timestamp_stop": 252870000
+        }, 
+        {
+          "duration": 4.927999973297119, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=831", 
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
+          ], 
+          "evilness": 12, 
+          "evilness-is-deprecated": 1, 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF4.SS"
+          ], 
+          "severity-score": 12, 
+          "status": "FAIL", 
+          "timestamp_start": 249143000, 
+          "timestamp_stop": 254071000
+        }
+      ], 
+      "severity-score": 564, 
+      "status": "FAIL"
+    }, 
+    "Position Estimate Divergence": {
+      "description": "A UAV often has several estimates of its Position.  This test will FAIL or WARN if the various vehicle's Position estimates diverge", 
+      "evilness": 20, 
+      "evilness-is-deprecated": 1, 
+      "name": "Position Estimate Divergence", 
+      "results": [
+        {
+          "duration": 31.26399993896484, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=14949859.186929 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": 1, 
+          "name": "GPS", 
+          "reason": "This position estimate differs from the canonical craft position", 
+          "series": [
+            "GPS.Lat", 
+            "GPS.Lng"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 13902000, 
+          "timestamp_stop": 45166000
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "Sensor Health": {
+      "description": "A UAV can self-assess its sensors' health.  This test will FAIL if any sensor is detected as failed", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Sensor Health", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Vehicle Definition": {
+      "description": "The vehicle type is normally automatically detected by dronekit-la from the log itself.  Sometimes the log does not contain sufficient information to make this determination.  This test will FAIL if the craft type is never defined", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Vehicle Definition", 
+      "results": [
+        {
+          "evidence": [
+            "Copter"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": 1, 
+          "reason": "Vehicle was appropriately defined", 
+          "series": [
+            "MSG.Message"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Velocity Estimate Divergence": {
+      "description": "A UAV typically has several estimates of its velocity.  This test will FAIL if the craft's velocity estimates diverge", 
+      "evilness": 0, 
+      "evilness-is-deprecated": 1, 
+      "name": "Velocity Estimate Divergence", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }
+  }, 
+  "timestamp": "123456789", 
+  "total-distance-travelled-units": "metres", 
+  "total-distance-travellled": 405.0374688612437, 
+  "total-flight-time": 171.2070007324219, 
+  "total-flight-time-units": "seconds"
+}
