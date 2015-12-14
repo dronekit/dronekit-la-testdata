@@ -2,6 +2,7 @@
   "bytes-dropped": 0, 
   "duration": "987654321", 
   "evilness": 1529, 
+  "evilness-is-deprecated": "Use severity-score", 
   "format-version": "0.1", 
   "git_version": "some-hash", 
   "maximum-altitude-absolute": 604.3900146484375, 
@@ -17,9 +18,9 @@
   "severity-score": 1529, 
   "tests": {
     "Altitude Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Altitude.  This test will FAIL or WARN if the various vehicle's Altitude estimates diverge", 
+      "description": "A UAV often has several estimates of its Altitude.  This test will FAIL or WARN if the various vehicle's Altitude estimates diverge.", 
       "evilness": 80, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Altitude Estimate Divergence", 
       "results": [
         {
@@ -31,7 +32,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "GPS", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
@@ -51,7 +52,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "EKF1", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
@@ -71,7 +72,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "GPS", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
@@ -91,7 +92,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "EKF1", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
@@ -107,14 +108,14 @@
       "status": "FAIL"
     }, 
     "Any Parameters Seen": {
-      "description": "Autopilots store information on-board in the form of parameters.  For proper analysis, logs must contain this parameter information.  This test will FAIL if the input does not contain parameter information.", 
+      "description": "Autopilots store configuration settings known as 'parameters'. For proper analysis, logs must contain this parameter information. This test will FAIL if the input does not contain parameter information.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Any Parameters Seen", 
       "results": [
         {
           "evilness": 0, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Parameters seen", 
           "series": [
             "PARM.Name", 
@@ -128,9 +129,9 @@
       "status": "PASS"
     }, 
     "Arming Checks": {
-      "description": "An autopilot checks many aspects of the aircraft's state before allowing it to be armed - for example, that it has a good GPS fix.  This test will FAIL if the craft ever arms when some arming checks are disabled", 
+      "description": "An autopilot checks many aspects of the aircraft's state before allowing it to be armed - for example, that it has a good GPS fix.  This test will FAIL if the craft ever arms when some arming checks are disabled.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Arming Checks", 
       "results": [], 
       "severity-score": 0, 
@@ -139,7 +140,7 @@
     "Attitude Control": {
       "description": "The autopilot reports both the craft's attitude and the attitude the craft believes it should be at.  This test will FAIL or WARN if the vehicle's desired attitudes and achieved attitudes are not within threshold delta values for more than a threshold time.", 
       "evilness": 270, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Attitude Control", 
       "results": [
         {
@@ -155,7 +156,7 @@
             "Desired-Pitch-at-Max-Delta=-6.710000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -186,7 +187,7 @@
             "Motor 3 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -216,7 +217,7 @@
             "Motor 3 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -244,7 +245,7 @@
             "Desired-Pitch-at-Max-Delta=-3.790000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -272,7 +273,7 @@
             "Desired-Pitch-at-Max-Delta=30.930000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -300,7 +301,7 @@
             "Desired-Pitch-at-Max-Delta=6.730000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -328,7 +329,7 @@
             "Desired-Pitch-at-Max-Delta=22.809999 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -356,7 +357,7 @@
             "Desired-Pitch-at-Max-Delta=-8.520000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -384,7 +385,7 @@
             "Desired-Pitch-at-Max-Delta=-11.520000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -412,7 +413,7 @@
             "Desired-Pitch-at-Max-Delta=22.070000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -440,7 +441,7 @@
             "Desired-Pitch-at-Max-Delta=-2.480000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -468,7 +469,7 @@
             "Desired-Pitch-at-Max-Delta=29.559999 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -500,7 +501,7 @@
             "Motor 4 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -528,7 +529,7 @@
             "Desired-Pitch-at-Max-Delta=-10.840000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -558,7 +559,7 @@
             "Motor 3 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -586,7 +587,7 @@
             "Desired-Pitch-at-Max-Delta=7.840000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -614,7 +615,7 @@
             "Desired-Pitch-at-Max-Delta=14.090000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -642,7 +643,7 @@
             "Desired-Pitch-at-Max-Delta=21.580000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -672,7 +673,7 @@
             "Motor 4 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -700,7 +701,7 @@
             "Desired-Pitch-at-Max-Delta=4.060000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -728,7 +729,7 @@
             "Desired-Pitch-at-Max-Delta=-6.570000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -756,7 +757,7 @@
             "Desired-Pitch-at-Max-Delta=-7.450000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -784,7 +785,7 @@
             "Desired-Pitch-at-Max-Delta=-5.340000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -813,7 +814,7 @@
             "Motor 3 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -841,7 +842,7 @@
             "Desired-Pitch-at-Max-Delta=6.360000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -869,7 +870,7 @@
             "Desired-Pitch-at-Max-Delta=7.280000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -897,7 +898,7 @@
             "Desired-Pitch-at-Max-Delta=17.280001 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -925,7 +926,7 @@
             "Desired-Pitch-at-Max-Delta=-3.750000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -953,7 +954,7 @@
             "Desired-Pitch-at-Max-Delta=-2.740000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -981,7 +982,7 @@
             "Desired-Pitch-at-Max-Delta=-1.470000 degrees"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -1009,7 +1010,7 @@
             "Desired-Pitch-at-Max-Delta=15.280000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -1037,7 +1038,7 @@
             "Desired-Pitch-at-Max-Delta=-0.390000 degrees"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -1069,7 +1070,7 @@
             "Motor 4 clipping low"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -1103,7 +1104,7 @@
             "Motor 4 failed"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Desired attitude not achieved", 
           "series": [
             "ATT.Roll", 
@@ -1123,9 +1124,9 @@
       "status": "FAIL"
     }, 
     "Attitude Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Attitude.  This test will FAIL or WARN if the various vehicle's Attitude estimates diverge", 
+      "description": "A UAV often has several estimates of its Attitude.  This test will FAIL or WARN if the various vehicle's Attitude estimates diverge.", 
       "evilness": 20, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Attitude Estimate Divergence", 
       "results": [
         {
@@ -1137,7 +1138,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "AHR2", 
           "reason": "This attitude estimate differs from the canonical craft attitude", 
           "series": [
@@ -1162,7 +1163,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "AHR2", 
           "reason": "This attitude estimate differs from the canonical craft attitude", 
           "series": [
@@ -1183,9 +1184,9 @@
       "status": "FAIL"
     }, 
     "AutoPilot Health": {
-      "description": "Many autopilots are capable of monitoring their own performance.  This test will FAIL if problems are detected with the autopilot", 
+      "description": "Many autopilots are capable of monitoring their own performance.  This test will FAIL if problems are detected with the autopilot.", 
       "evilness": 50, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "AutoPilot Health", 
       "results": [
         {
@@ -1196,7 +1197,7 @@
             "slices-max-threshold=64561"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
             "MSG.NLon", 
@@ -1216,7 +1217,7 @@
             "slices-max-threshold=12010"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
             "MSG.NLon", 
@@ -1236,7 +1237,7 @@
             "slices-max-threshold=11996"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
             "MSG.NLon", 
@@ -1256,7 +1257,7 @@
             "slices-max-threshold=12933"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
             "MSG.NLon", 
@@ -1276,7 +1277,7 @@
             "slices-max-threshold=13247"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
             "MSG.NLon", 
@@ -1293,9 +1294,9 @@
       "status": "FAIL"
     }, 
     "Battery": {
-      "description": "Many autpilots are capable of monitoring their flight batteries.  This test will FAIL if the battery level falls below the battery failsafe threshold level, or if a battery failsafe event is received.", 
+      "description": "Many autopilots are capable of monitoring their flight batteries.  This test will FAIL if the battery level falls below the battery failsafe threshold level, or if a battery failsafe event is received.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Battery", 
       "results": [], 
       "severity-score": 0, 
@@ -1304,7 +1305,7 @@
     "Brownout": {
       "description": "A log should not end while the vehicle appears to be moving under its own power.  This test will FAIL if the vehicle still appears to be moving when the log ends.", 
       "evilness": 10, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Brownout", 
       "results": [
         {
@@ -1315,7 +1316,7 @@
             "Vehicle still flying"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Log ended while craft still flying", 
           "series": [
             "RCOU.Ch1", 
@@ -1331,9 +1332,9 @@
       "status": "FAIL"
     }, 
     "Compass Offsets": {
-      "description": "Compass calibration process produces a set of parameters that specify expected compass discrepancies.  This test will WARN or FAIL depending on the degree that these compass offset parameters exceed specified thresholds.", 
+      "description": "Compass calibration produces a set of parameters that specify expected compass discrepancies.  This test will WARN or FAIL depending on the degree that these compass offset parameters exceed specified thresholds.", 
       "evilness": 10, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Compass Offsets", 
       "results": [
         {
@@ -1344,7 +1345,7 @@
             "COMPASS_OFS 262.600011 >= 200.000000"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass offsets in parameters are out of bounds", 
           "series": [
             "PARM.Name", 
@@ -1362,7 +1363,7 @@
             "COMPASS_OFS2 300.436427 >= 200.000000"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass offsets in parameters are out of bounds", 
           "series": [
             "PARM.Name", 
@@ -1377,9 +1378,9 @@
       "status": "PASS"
     }, 
     "Compass Vector Length": {
-      "description": "The strength and direction of the Earth's magnetic field should be relatively constant and lay within certain thresholds.  This test will FAIL or WARN if the compass vector length exceeds the respective threshold.  Possible causes include flying near large metal objects.", 
+      "description": "The strength and direction of the Earth's magnetic field should be relatively constant and lie within certain thresholds.  This test will FAIL or WARN if the compass vector length exceeds the respective threshold.  Possible causes include flying near large metal objects.", 
       "evilness": 285, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Compass Vector Length", 
       "results": [
         {
@@ -1391,7 +1392,7 @@
             "length-max=577.585492"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1412,7 +1413,7 @@
             "length-max=785.871491"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1433,7 +1434,7 @@
             "length-max=553.174475"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1454,7 +1455,7 @@
             "length-max=580.107749"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1475,7 +1476,7 @@
             "length-max=798.535535"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1496,7 +1497,7 @@
             "length-max=565.916072"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1517,7 +1518,7 @@
             "length-max=565.574045"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1538,7 +1539,7 @@
             "length-max=595.031092"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1559,7 +1560,7 @@
             "length-max=569.477831"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1580,7 +1581,7 @@
             "length-max=1076.558870"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1601,7 +1602,7 @@
             "length-max=1046.090818"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1622,7 +1623,7 @@
             "length-max=722.735083"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1643,7 +1644,7 @@
             "length-max=577.256442"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1664,7 +1665,7 @@
             "length-max=1143.700573"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1685,7 +1686,7 @@
             "length-max=828.035627"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1706,7 +1707,7 @@
             "length-max=581.894320"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1727,7 +1728,7 @@
             "length-max=590.272818"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1748,7 +1749,7 @@
             "length-max=593.986532"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1769,7 +1770,7 @@
             "length-max=577.631370"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1790,7 +1791,7 @@
             "length-max=1095.540506"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1811,7 +1812,7 @@
             "length-max=573.970383"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1832,7 +1833,7 @@
             "length-max=1163.646424"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1853,7 +1854,7 @@
             "length-max=565.510389"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1874,7 +1875,7 @@
             "length-max=1010.150979"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1895,7 +1896,7 @@
             "length-max=555.386352"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1916,7 +1917,7 @@
             "length-max=590.647949"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -1937,7 +1938,7 @@
             "length-max=632.407305"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG.MagX", 
@@ -1958,7 +1959,7 @@
             "length-max=1336.587446"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -1979,7 +1980,7 @@
             "length-max=648.899068"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -2000,7 +2001,7 @@
             "length-max=1242.592854"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -2021,7 +2022,7 @@
             "length-max=569.387390"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -2042,7 +2043,7 @@
             "length-max=562.753054"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -2063,7 +2064,7 @@
             "length-max=675.661158"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG.MagX", 
@@ -2084,7 +2085,7 @@
             "length-max=577.226126"
           ], 
           "evilness": 5, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG2.MagX", 
@@ -2105,7 +2106,7 @@
             "length-max=1100.125902"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length above threshold", 
           "series": [
             "MAG3.MagX", 
@@ -2124,7 +2125,7 @@
             "delta-percent=64.831689"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length delta exceeds threshold", 
           "series": [
             "MAG.MagX", 
@@ -2141,7 +2142,7 @@
             "delta-percent=72.968426"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length delta exceeds threshold", 
           "series": [
             "MAG2.MagX", 
@@ -2158,7 +2159,7 @@
             "delta-percent=680.456586"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Compass Vector Length delta exceeds threshold", 
           "series": [
             "MAG3.MagX", 
@@ -2173,9 +2174,9 @@
       "status": "FAIL"
     }, 
     "Crash Test": {
-      "description": "Crashes are detected both heuristically and by explicit log messages.  This test will FAIL if the vehicle appears to crash", 
+      "description": "Crashes are detected both heuristically and by explicit log messages.  This test will FAIL if the vehicle appears to crash.", 
       "evilness": 200, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Crash Test", 
       "results": [
         {
@@ -2187,7 +2188,7 @@
             "SERVO_OUTPUT_RAW.servo4_raw=1446.000000"
           ], 
           "evilness": 100, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Vehicle is past maximum allowed angle and running its motors", 
           "series": [
             "ATT.Roll", 
@@ -2213,7 +2214,7 @@
             "SERVO_OUTPUT_RAW.servo4_raw=1298.000000"
           ], 
           "evilness": 100, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Vehicle is past maximum allowed angle and running its motors", 
           "series": [
             "ATT.Roll", 
@@ -2235,9 +2236,9 @@
       "status": "FAIL"
     }, 
     "Ever Armed": {
-      "description": "Vehicles typically need to progress through a sequence of arming steps before they can move.  This test will FAIL if the craft did not arm", 
+      "description": "Vehicles typically need to progress through a sequence of arming steps before they can move.  This test will FAIL if the craft did not arm.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Ever Armed", 
       "results": [
         {
@@ -2245,7 +2246,7 @@
             "Armed at 72606000"
           ], 
           "evilness": 0, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The vehicle armed", 
           "series": [
             "EV.Id"
@@ -2259,14 +2260,14 @@
       "status": "PASS"
     }, 
     "Ever Flew": {
-      "description": "Determining whether a vehicle has ever flown in a log is done heuristically based on things like motor speeds.  This test will FAIL if the craft did not ever seem to fly", 
+      "description": "Determining whether a vehicle has ever flown in a log is done heuristically based on things like motor speeds.  This test will FAIL if the craft did not ever seem to fly.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Ever Flew", 
       "results": [
         {
           "evilness": 0, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The vehicle appeared to fly", 
           "series": [
             "EV.Id", 
@@ -2284,9 +2285,9 @@
       "status": "PASS"
     }, 
     "GPS Fix": {
-      "description": "The accuracy and precision of GPS messages can vary depending on many factors including weather, ionospheric disturbances and number of satellites visible.  This test will FAIL if the quality of the GPS information is poor", 
+      "description": "The accuracy and precision of GPS messages can vary depending on many factors including weather, ionospheric disturbances and number of satellites visible.  This test will FAIL if the quality of the GPS information is poor.", 
       "evilness": 20, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "GPS Fix", 
       "results": [
         {
@@ -2299,7 +2300,7 @@
             "HDop-threshold: 5.000000"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "No 3D fix was ever acquired", 
           "series": [
             "GPS.HDop", 
@@ -2316,7 +2317,7 @@
             "first-fix-time-units=seconds"
           ], 
           "evilness": 0, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "First 3D GPS Fix Acquired", 
           "series": [
             "GPS.Status"
@@ -2330,9 +2331,9 @@
       "status": "FAIL"
     }, 
     "Good EKF": {
-      "description": "The Extended Kalman filter has many built-in checks to ensure it is funcitoning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
+      "description": "The Extended Kalman Filter (EKF) has many built-in checks to ensure that it is functioning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
       "evilness": 564, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Good EKF", 
       "results": [
         {
@@ -2352,7 +2353,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2379,7 +2380,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2402,7 +2403,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 16, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2429,7 +2430,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2452,7 +2453,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 16, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2479,7 +2480,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2502,7 +2503,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 16, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2529,7 +2530,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2552,7 +2553,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 16, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2579,7 +2580,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2606,7 +2607,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2629,7 +2630,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 16, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2656,7 +2657,7 @@
             "Predicted horizontal position (absolute) bad"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2677,7 +2678,7 @@
             "vertical position (above ground) estimate bad"
           ], 
           "evilness": 14, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2696,7 +2697,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2715,7 +2716,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2734,7 +2735,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2753,7 +2754,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2772,7 +2773,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2791,7 +2792,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2810,7 +2811,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2829,7 +2830,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2848,7 +2849,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2867,7 +2868,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2886,7 +2887,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2905,7 +2906,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2924,7 +2925,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -2942,7 +2943,7 @@
             "threshold=1.000000"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds fail threshold", 
           "series": [
             "EKF4.SMX", 
@@ -2962,7 +2963,7 @@
             "threshold=1.000000"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds fail threshold", 
           "series": [
             "EKF4.SMX", 
@@ -2982,7 +2983,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3003,7 +3004,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -3021,7 +3022,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "pos_vert_variance exceeds warn threshold", 
           "series": [
             "EKF4.SH"
@@ -3039,7 +3040,7 @@
             "threshold=1.000000"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds fail threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3059,7 +3060,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3079,7 +3080,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3099,7 +3100,7 @@
             "threshold=1.000000"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "velocity_variance exceeds fail threshold", 
           "series": [
             "EKF4.SV"
@@ -3117,7 +3118,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3137,7 +3138,7 @@
             "threshold=1.000000"
           ], 
           "evilness": 10, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "pos_horiz_variance exceeds fail threshold", 
           "series": [
             "EKF4.SP"
@@ -3155,7 +3156,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3175,7 +3176,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3195,7 +3196,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3216,7 +3217,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -3234,7 +3235,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3254,7 +3255,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3274,7 +3275,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3294,7 +3295,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3314,7 +3315,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3334,7 +3335,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3354,7 +3355,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3374,7 +3375,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3394,7 +3395,7 @@
             "threshold=0.500000"
           ], 
           "evilness": 4, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "compass_variance exceeds warn threshold", 
           "series": [
             "EKF4.SMX", 
@@ -3415,7 +3416,7 @@
             "In constant position mode (no abs or rel position)"
           ], 
           "evilness": 12, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
@@ -3430,9 +3431,9 @@
       "status": "FAIL"
     }, 
     "Position Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Position.  This test will FAIL or WARN if the various vehicle's Position estimates diverge", 
+      "description": "A UAV often has several estimates of its Position.  This test will FAIL or WARN if the various vehicle's Position estimates diverge.", 
       "evilness": 20, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Position Estimate Divergence", 
       "results": [
         {
@@ -3444,7 +3445,7 @@
             "delta-time-threshold=0.500000 seconds"
           ], 
           "evilness": 20, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "name": "GPS", 
           "reason": "This position estimate differs from the canonical craft position", 
           "series": [
@@ -3461,18 +3462,18 @@
       "status": "FAIL"
     }, 
     "Sensor Health": {
-      "description": "A UAV can self-assess its sensors' health.  This test will FAIL if any sensor is detected as failed", 
+      "description": "A UAV can self-assess its sensors' health.  This test will FAIL if any sensor is detected as failed.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Sensor Health", 
       "results": [], 
       "severity-score": 0, 
       "status": "PASS"
     }, 
     "Vehicle Definition": {
-      "description": "The vehicle type is normally automatically detected by dronekit-la from the log itself.  Sometimes the log does not contain sufficient information to make this determination.  This test will FAIL if the craft type is never defined", 
+      "description": "The vehicle type is normally automatically detected by dronekit-la from the log.  Sometimes the log does not contain sufficient information to make this determination.  This test will FAIL if the craft type is never defined", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Vehicle Definition", 
       "results": [
         {
@@ -3480,7 +3481,7 @@
             "Copter"
           ], 
           "evilness": 0, 
-          "evilness-is-deprecated": 1, 
+          "evilness-is-deprecated": "Use severity-score", 
           "reason": "Vehicle was appropriately defined", 
           "series": [
             "MSG.Message"
@@ -3493,9 +3494,9 @@
       "status": "PASS"
     }, 
     "Velocity Estimate Divergence": {
-      "description": "A UAV typically has several estimates of its velocity.  This test will FAIL if the craft's velocity estimates diverge", 
+      "description": "A UAV typically has several estimates of its velocity.  This test will FAIL if the craft's velocity estimates diverge.", 
       "evilness": 0, 
-      "evilness-is-deprecated": 1, 
+      "evilness-is-deprecated": "Use severity-score", 
       "name": "Velocity Estimate Divergence", 
       "results": [], 
       "severity-score": 0, 
@@ -3503,8 +3504,8 @@
     }
   }, 
   "timestamp": "123456789", 
+  "total-distance-travelled": 405.0374688612437, 
   "total-distance-travelled-units": "metres", 
-  "total-distance-travellled": 405.0374688612437, 
   "total-flight-time": 171.2070007324219, 
   "total-flight-time-units": "seconds"
 }
