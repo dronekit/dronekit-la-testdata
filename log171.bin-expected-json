@@ -3503,8 +3503,8 @@
     }
   }, 
   "timestamp": "123456789", 
+  "total-distance-travelled": 405.0374688612437, 
   "total-distance-travelled-units": "metres", 
-  "total-distance-travellled": 405.0374688612437, 
   "total-flight-time": 171.2070007324219, 
   "total-flight-time-units": "seconds"
 }
