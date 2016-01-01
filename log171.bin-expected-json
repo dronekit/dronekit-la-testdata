@@ -23,7 +23,7 @@
       "name": "Altitude Estimate Divergence", 
       "results": [
         {
-          "duration": 47.45299911499023, 
+          "duration": 47.452999114990234, 
           "duration-units": "seconds", 
           "evidence": [
             "max-delta=1892.849941 metres", 
@@ -63,7 +63,7 @@
           "timestamp_stop": 84356000
         }, 
         {
-          "duration": 1.177999973297119, 
+          "duration": 1.1779999732971191, 
           "duration-units": "seconds", 
           "evidence": [
             "max-delta=-5.079956 metres", 
@@ -143,7 +143,7 @@
       "name": "Attitude Control", 
       "results": [
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -288,7 +288,7 @@
           "timestamp_stop": 98975000
         }, 
         {
-          "duration": 0.4040000140666962, 
+          "duration": 0.40400001406669617, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=10.000000", 
@@ -316,7 +316,7 @@
           "timestamp_stop": 99782000
         }, 
         {
-          "duration": 0.4040000140666962, 
+          "duration": 0.40400001406669617, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=10.000000", 
@@ -372,7 +372,7 @@
           "timestamp_stop": 104323000
         }, 
         {
-          "duration": 0.4029999971389771, 
+          "duration": 0.40299999713897705, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -630,7 +630,7 @@
           "timestamp_stop": 151531000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -772,7 +772,7 @@
           "timestamp_stop": 174629000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -829,7 +829,7 @@
           "timestamp_stop": 177451000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=10.000000", 
@@ -885,7 +885,7 @@
           "timestamp_stop": 178963000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -913,7 +913,7 @@
           "timestamp_stop": 183404000
         }, 
         {
-          "duration": 0.4029999971389771, 
+          "duration": 0.40299999713897705, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=10.000000", 
@@ -941,7 +941,7 @@
           "timestamp_stop": 184211000
         }, 
         {
-          "duration": 0.4029999971389771, 
+          "duration": 0.40299999713897705, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=10.000000", 
@@ -997,7 +997,7 @@
           "timestamp_stop": 188857000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=5.000000", 
@@ -1209,7 +1209,7 @@
           "timestamp_stop": 83740000
         }, 
         {
-          "duration": 10.08199977874756, 
+          "duration": 10.081999778747559, 
           "duration-units": "seconds", 
           "evidence": [
             "slices-threshold=5000", 
@@ -1229,7 +1229,7 @@
           "timestamp_stop": 134178000
         }, 
         {
-          "duration": 10.08300018310547, 
+          "duration": 10.083000183105469, 
           "duration-units": "seconds", 
           "evidence": [
             "slices-threshold=5000", 
@@ -1269,7 +1269,7 @@
           "timestamp_stop": 214868000
         }, 
         {
-          "duration": 10.07900047302246, 
+          "duration": 10.079000473022461, 
           "duration-units": "seconds", 
           "evidence": [
             "slices-threshold=5000", 
@@ -1467,7 +1467,7 @@
           "timestamp_stop": 87168000
         }, 
         {
-          "duration": 1.412999987602234, 
+          "duration": 1.4129999876022339, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=600.000000", 
@@ -1509,7 +1509,7 @@
           "timestamp_stop": 88783000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1551,7 +1551,7 @@
           "timestamp_stop": 91808000
         }, 
         {
-          "duration": 0.4029999971389771, 
+          "duration": 0.40299999713897705, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1719,7 +1719,7 @@
           "timestamp_stop": 146680000
         }, 
         {
-          "duration": 0.4029999971389771, 
+          "duration": 0.40299999713897705, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1782,7 +1782,7 @@
           "timestamp_stop": 150211000
         }, 
         {
-          "duration": 10.39099979400635, 
+          "duration": 10.390999794006348, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=600.000000", 
@@ -1803,7 +1803,7 @@
           "timestamp_stop": 157677000
         }, 
         {
-          "duration": 1.008000016212463, 
+          "duration": 1.0080000162124634, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1845,7 +1845,7 @@
           "timestamp_stop": 184503000
         }, 
         {
-          "duration": 0.4040000140666962, 
+          "duration": 0.40400001406669617, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1887,7 +1887,7 @@
           "timestamp_stop": 192575000
         }, 
         {
-          "duration": 0.3030000030994415, 
+          "duration": 0.30300000309944153, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1908,7 +1908,7 @@
           "timestamp_stop": 224053000
         }, 
         {
-          "duration": 1.108999967575073, 
+          "duration": 1.1089999675750732, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -1929,7 +1929,7 @@
           "timestamp_stop": 230102000
         }, 
         {
-          "duration": 227.6920013427734, 
+          "duration": 227.69200134277344, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=600.000000", 
@@ -2013,7 +2013,7 @@
           "timestamp_stop": 240177000
         }, 
         {
-          "duration": 2.101000070571899, 
+          "duration": 2.1010000705718994, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=550.000000", 
@@ -2055,7 +2055,7 @@
           "timestamp_stop": 243993000
         }, 
         {
-          "duration": 14.09500026702881, 
+          "duration": 14.095000267028809, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=600.000000", 
@@ -2097,7 +2097,7 @@
           "timestamp_stop": 254071000
         }, 
         {
-          "duration": 13.49100017547607, 
+          "duration": 13.491000175476074, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold=600.000000", 
@@ -2336,7 +2336,7 @@
       "name": "Good EKF", 
       "results": [
         {
-          "duration": 11.47799968719482, 
+          "duration": 11.477999687194824, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=0", 
@@ -2490,7 +2490,7 @@
           "timestamp_stop": 35974000
         }, 
         {
-          "duration": 3.842000007629395, 
+          "duration": 3.8420000076293945, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=16549", 
@@ -2540,7 +2540,7 @@
           "timestamp_stop": 46076000
         }, 
         {
-          "duration": 3.539000034332275, 
+          "duration": 3.5390000343322754, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=16549", 
@@ -2688,7 +2688,7 @@
           "timestamp_stop": 74688000
         }, 
         {
-          "duration": 10.17099952697754, 
+          "duration": 10.170999526977539, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=2879", 
@@ -2707,7 +2707,7 @@
           "timestamp_stop": 84859000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=6975", 
@@ -2726,7 +2726,7 @@
           "timestamp_stop": 84960000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=2879", 
@@ -2764,7 +2764,7 @@
           "timestamp_stop": 85363000
         }, 
         {
-          "duration": 0.1019999980926514, 
+          "duration": 0.10199999809265137, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
@@ -2802,7 +2802,7 @@
           "timestamp_stop": 161018000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
@@ -2821,7 +2821,7 @@
           "timestamp_stop": 161119000
         }, 
         {
-          "duration": 2.013999938964844, 
+          "duration": 2.0139999389648438, 
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
@@ -2935,7 +2935,7 @@
           "timestamp_stop": 166562000
         }, 
         {
-          "duration": 0.2020000070333481, 
+          "duration": 0.20200000703334808, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=1.523483", 
@@ -2955,7 +2955,7 @@
           "timestamp_stop": 240289000
         }, 
         {
-          "duration": 0.1019999980926514, 
+          "duration": 0.10199999809265137, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=1.108197", 
@@ -2975,7 +2975,7 @@
           "timestamp_stop": 240491000
         }, 
         {
-          "duration": 0.2020000070333481, 
+          "duration": 0.20200000703334808, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.619758", 
@@ -3032,7 +3032,7 @@
           "timestamp_stop": 243803000
         }, 
         {
-          "duration": 3.413000106811523, 
+          "duration": 3.4130001068115234, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=3.074703", 
@@ -3052,7 +3052,7 @@
           "timestamp_stop": 244408000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.519038", 
@@ -3072,7 +3072,7 @@
           "timestamp_stop": 244609000
         }, 
         {
-          "duration": 0.1000000014901161, 
+          "duration": 0.10000000149011612, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.548544", 
@@ -3110,7 +3110,7 @@
           "timestamp_stop": 244911000
         }, 
         {
-          "duration": 0.2010000050067902, 
+          "duration": 0.20100000500679016, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.530377", 
@@ -3148,7 +3148,7 @@
           "timestamp_stop": 245314000
         }, 
         {
-          "duration": 0.2010000050067902, 
+          "duration": 0.20100000500679016, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.560981", 
@@ -3168,7 +3168,7 @@
           "timestamp_stop": 246019000
         }, 
         {
-          "duration": 0.2010000050067902, 
+          "duration": 0.20100000500679016, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.575239", 
@@ -3267,7 +3267,7 @@
           "timestamp_stop": 250149000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.527067", 
@@ -3287,7 +3287,7 @@
           "timestamp_stop": 250351000
         }, 
         {
-          "duration": 0.2010000050067902, 
+          "duration": 0.20100000500679016, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.538981", 
@@ -3307,7 +3307,7 @@
           "timestamp_stop": 250654000
         }, 
         {
-          "duration": 0.2020000070333481, 
+          "duration": 0.20200000703334808, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.536004", 
@@ -3327,7 +3327,7 @@
           "timestamp_stop": 250956000
         }, 
         {
-          "duration": 0.1000000014901161, 
+          "duration": 0.10000000149011612, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.533760", 
@@ -3347,7 +3347,7 @@
           "timestamp_stop": 251258000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.500899", 
@@ -3367,7 +3367,7 @@
           "timestamp_stop": 251963000
         }, 
         {
-          "duration": 0.101000003516674, 
+          "duration": 0.10100000351667404, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.513615", 
@@ -3387,7 +3387,7 @@
           "timestamp_stop": 252568000
         }, 
         {
-          "duration": 0.1000000014901161, 
+          "duration": 0.10000000149011612, 
           "duration-units": "seconds", 
           "evidence": [
             "max-variance=0.500100", 
@@ -3437,7 +3437,7 @@
       "results": [
         {
           "axis": "X", 
-          "duration": 14.82999992370605, 
+          "duration": 14.829999923706055, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
@@ -3463,7 +3463,7 @@
         }, 
         {
           "axis": "Y", 
-          "duration": 14.93099975585938, 
+          "duration": 14.930999755859375, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
@@ -3489,7 +3489,7 @@
         }, 
         {
           "axis": "Z", 
-          "duration": 14.82999992370605, 
+          "duration": 14.829999923706055, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
@@ -3541,7 +3541,7 @@
         }, 
         {
           "axis": "Y", 
-          "duration": 14.93099975585938, 
+          "duration": 14.930999755859375, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
@@ -3567,7 +3567,7 @@
         }, 
         {
           "axis": "Z", 
-          "duration": 14.82999992370605, 
+          "duration": 14.829999923706055, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
@@ -3602,7 +3602,7 @@
       "name": "Position Estimate Divergence", 
       "results": [
         {
-          "duration": 31.26399993896484, 
+          "duration": 31.263999938964844, 
           "duration-units": "seconds", 
           "evidence": [
             "max-delta=14949859.186929 metres", 
@@ -3671,6 +3671,6 @@
   "timestamp": "123456789", 
   "total-distance-travelled": 405.0374688612437, 
   "total-distance-travelled-units": "metres", 
-  "total-flight-time": 171.2070007324219, 
+  "total-flight-time": 171.20700073242188, 
   "total-flight-time-units": "seconds"
 }
