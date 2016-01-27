@@ -18,7 +18,7 @@
   "severity-score": 1749, 
   "tests": {
     "Altitude Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Altitude.  This test will FAIL or WARN if the various vehicle's Altitude estimates diverge.", 
+      "description": "A UAV often has several estimates of its altitude.  This test will FAIL or WARN if the various vehicle's altitude estimates diverge.", 
       "evilness": 80, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "Altitude Estimate Divergence", 
@@ -1124,7 +1124,7 @@
       "status": "FAIL"
     }, 
     "Attitude Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Attitude.  This test will FAIL or WARN if the various vehicle's Attitude estimates diverge.", 
+      "description": "A UAV often has several estimates of its attitude.  This test will FAIL or WARN if the various vehicle's attitude estimates diverge.", 
       "evilness": 20, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "Attitude Estimate Divergence", 
@@ -3570,7 +3570,7 @@
       "status": "FAIL"
     }, 
     "Position Estimate Divergence": {
-      "description": "A UAV often has several estimates of its Position.  This test will FAIL or WARN if the various vehicle's Position estimates diverge.", 
+      "description": "A UAV often has several estimates of its position.  This test will FAIL or WARN if the various vehicle's position estimates diverge.", 
       "evilness": 20, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "Position Estimate Divergence", 
