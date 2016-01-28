@@ -15,13 +15,13 @@ It also contains typical dronekit-la output which can be used to validate log an
 
 ## Contributing new logs
 
-We welcome new logs and updated analysis updates. These must be provided with the permission of the owner, and permit "free use" by anyone. 
+We welcome new logs and analysis-output updates. These must be provided with the permission of the owner, and permit [free use](#license) by anyone. 
 
 Here are a few basic rules for adding logs:
 
 * The permission of the log owner must be granted before a log is uploaded
 * Logs should be kept as short as possible (to make the repo usable). 5MB is the "nominal" maximum size.
-* Please log ownership indicate in the commit message.
+* Please state log ownership in the commit message.
  
 **NOTE:** Before adding a log, please consider any sensitive information that it may contain.
 
