@@ -1302,35 +1302,6 @@
       "severity-score": 0, 
       "status": "PASS"
     }, 
-    "Brownout": {
-      "description": "A log should not end while the vehicle appears to be moving under its own power.  This test will FAIL if the vehicle still appears to be moving when the log ends.", 
-      "evilness": 10, 
-      "evilness-is-deprecated": "Use severity-score", 
-      "name": "Brownout", 
-      "results": [
-        {
-          "evidence": [
-            "Final altitude 593.229980 metres", 
-            "Takeoff altitude 592.429993 metres", 
-            "Final relative altitude 0.799988 metres", 
-            "Vehicle still flying"
-          ], 
-          "evilness": 10, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Log ended while craft still flying", 
-          "series": [
-            "RCOU.Ch1", 
-            "RCOU.Ch2", 
-            "RCOU.Ch3", 
-            "RCOU.Ch4"
-          ], 
-          "severity-score": 10, 
-          "status": "FAIL"
-        }
-      ], 
-      "severity-score": 10, 
-      "status": "FAIL"
-    }, 
     "Compass Offsets": {
       "description": "Compass calibration produces a set of parameters that specify expected compass discrepancies.  This test will WARN or FAIL depending on the degree that these compass offset parameters exceed specified thresholds.", 
       "evilness": 10, 
@@ -3608,6 +3579,37 @@
       "results": [], 
       "severity-score": 0, 
       "status": "PASS"
+    }, 
+    "Truncated Log": {
+      "description": "A log should not end while the vehicle appears to be moving under its own power.  This test will FAIL if the vehicle still appears to be moving when the log ends.", 
+      "evilness": 10, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Truncated Log", 
+      "results": [
+        {
+          "evidence": [
+            "Final altitude 593.229980 metres", 
+            "Takeoff altitude 592.429993 metres", 
+            "Final relative altitude 0.799988 metres", 
+            "Vehicle still flying", 
+            "AutoPilot Voltage OK (5.30 > 4.60)"
+          ], 
+          "evilness": 10, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Log ended while craft still flying", 
+          "series": [
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4", 
+            "POWR.Vcc"
+          ], 
+          "severity-score": 10, 
+          "status": "FAIL"
+        }
+      ], 
+      "severity-score": 10, 
+      "status": "FAIL"
     }, 
     "Vehicle Definition": {
       "description": "The vehicle type is normally automatically detected by dronekit-la from the log.  Sometimes the log does not contain sufficient information to make this determination.  This test will FAIL if the craft type is never defined", 
