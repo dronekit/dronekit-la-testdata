@@ -36,6 +36,7 @@
           "name": "GPS", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
+            "AHR2.Alt", 
             "GPS.Alt"
           ], 
           "severity-score": 20, 
@@ -56,6 +57,7 @@
           "name": "EKF1", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
+            "AHR2.Alt", 
             "EKF1.PD"
           ], 
           "severity-score": 20, 
@@ -76,6 +78,7 @@
           "name": "GPS", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
+            "AHR2.Alt", 
             "GPS.Alt"
           ], 
           "severity-score": 20, 
@@ -96,6 +99,7 @@
           "name": "EKF1", 
           "reason": "This altitude estimate differs from the canonical craft altitude", 
           "series": [
+            "AHR2.Alt", 
             "EKF1.PD"
           ], 
           "severity-score": 20, 
@@ -1200,9 +1204,9 @@
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
-            "MSG.NLon", 
-            "MSG.NLoop", 
-            "MSG.MaxT"
+            "PM.NLon", 
+            "PM.NLoop", 
+            "PM.MaxT"
           ], 
           "severity-score": 10, 
           "status": "FAIL", 
@@ -1220,9 +1224,9 @@
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
-            "MSG.NLon", 
-            "MSG.NLoop", 
-            "MSG.MaxT"
+            "PM.NLon", 
+            "PM.NLoop", 
+            "PM.MaxT"
           ], 
           "severity-score": 10, 
           "status": "FAIL", 
@@ -1240,9 +1244,9 @@
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
-            "MSG.NLon", 
-            "MSG.NLoop", 
-            "MSG.MaxT"
+            "PM.NLon", 
+            "PM.NLoop", 
+            "PM.MaxT"
           ], 
           "severity-score": 10, 
           "status": "FAIL", 
@@ -1260,9 +1264,9 @@
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
-            "MSG.NLon", 
-            "MSG.NLoop", 
-            "MSG.MaxT"
+            "PM.NLon", 
+            "PM.NLoop", 
+            "PM.MaxT"
           ], 
           "severity-score": 10, 
           "status": "FAIL", 
@@ -1280,9 +1284,9 @@
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "Severe scheduler overruns", 
           "series": [
-            "MSG.NLon", 
-            "MSG.NLoop", 
-            "MSG.MaxT"
+            "PM.NLon", 
+            "PM.NLoop", 
+            "PM.MaxT"
           ], 
           "severity-score": 10, 
           "status": "FAIL", 
@@ -3602,6 +3606,7 @@
             "RCOU.Ch2", 
             "RCOU.Ch3", 
             "RCOU.Ch4", 
+            "AHR2.Alt", 
             "POWR.Vcc"
           ], 
           "severity-score": 10, 
