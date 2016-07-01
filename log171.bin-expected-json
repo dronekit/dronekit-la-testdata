@@ -1,7 +1,7 @@
 {
   "bytes-dropped": 0, 
   "duration": "987654321", 
-  "evilness": 1749, 
+  "evilness": 1769, 
   "evilness-is-deprecated": "Use severity-score", 
   "format-version": "0.1", 
   "git_version": "some-hash", 
@@ -15,7 +15,7 @@
   "maximum-velocity-units": "metres/second", 
   "packet-count": 91530, 
   "packet_count": 91530, 
-  "severity-score": 1749, 
+  "severity-score": 1769, 
   "tests": {
     "Altitude Estimate Divergence": {
       "description": "A UAV often has several estimates of its altitude.  This test will FAIL or WARN if the various vehicle's altitude estimates diverge.", 
@@ -2261,7 +2261,7 @@
     }, 
     "GPS Fix": {
       "description": "The accuracy and precision of GPS messages can vary depending on many factors including weather, ionospheric disturbances and number of satellites visible.  This test will FAIL if the quality of the GPS information is poor.", 
-      "evilness": 20, 
+      "evilness": 40, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "GPS Fix", 
       "results": [
@@ -2271,17 +2271,21 @@
           "evidence": [
             "satellites-visible: 0", 
             "HDop: 99.99", 
+            "sAcc: 1.97", 
             "satellites-visible-threshold: 5", 
-            "HDop-threshold: 5.000000"
+            "HDop-threshold: 5.000000", 
+            "sAcc-warn-threshold: 1.000000", 
+            "sAcc-fail-threshold: 1.500000"
           ], 
-          "evilness": 20, 
+          "evilness": 40, 
           "evilness-is-deprecated": "Use severity-score", 
-          "reason": "No 3D fix was ever acquired", 
+          "reason": "GPS Fix Is Bad", 
           "series": [
             "GPS.HDop", 
-            "GPS.NSats"
+            "GPS.NSats", 
+            "UBX3.sAcc"
           ], 
-          "severity-score": 20, 
+          "severity-score": 40, 
           "status": "FAIL", 
           "timestamp_start": 11737000, 
           "timestamp_stop": 45136000
@@ -2302,7 +2306,7 @@
           "timestamp": 45136000
         }
       ], 
-      "severity-score": 20, 
+      "severity-score": 40, 
       "status": "FAIL"
     }, 
     "Good EKF": {
