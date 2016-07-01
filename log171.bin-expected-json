@@ -3544,6 +3544,37 @@
       "severity-score": 240, 
       "status": "FAIL"
     }, 
+    "Parameters": {
+      "description": "Autopilots store configuration settings known as 'parameters'. This test detects some common configuration issues present in these parameters.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Parameters", 
+      "results": [
+        {
+          "duration": 254.07101440429688, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "name=BATT_AMP_PERVOLT", 
+            "value=17.000000", 
+            "Parameter set to (bad) default value", 
+            "default=17.000000"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Calibration value for the current sensor is incorrect.  Power bricks vary in their measurements.  Unless calibrated, a true representation of the craft's remaining power will not be available.", 
+          "series": [
+            "PARM.Name", 
+            "PARM.Value"
+          ], 
+          "severity-score": 0, 
+          "status": "FAIL", 
+          "timestamp_start": 0, 
+          "timestamp_stop": 254071000
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "FAIL"
+    }, 
     "Position Estimate Divergence": {
       "description": "A UAV often has several estimates of its position.  This test will FAIL or WARN if the various vehicle's position estimates diverge.", 
       "evilness": 20, 
