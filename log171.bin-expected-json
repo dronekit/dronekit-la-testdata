@@ -1,7 +1,7 @@
 {
   "bytes-dropped": 0, 
   "duration": "987654321", 
-  "evilness": 1769, 
+  "evilness": 1569, 
   "evilness-is-deprecated": "Use severity-score", 
   "format-version": "0.1", 
   "git_version": "some-hash", 
@@ -15,7 +15,7 @@
   "maximum-velocity-units": "metres/second", 
   "packet-count": 91530, 
   "packet_count": 91530, 
-  "severity-score": 1769, 
+  "severity-score": 1569, 
   "tests": {
     "Altitude Estimate Divergence": {
       "description": "A UAV often has several estimates of its altitude.  This test will FAIL or WARN if the various vehicle's altitude estimates diverge.", 
@@ -3384,45 +3384,21 @@
     }, 
     "Gyro Drift": {
       "description": "Gyroscopes sometimes start to register movement where there is none.  This test will FAIL or WARN if the any gyroscope's average acceleration on any axis begins to drift.", 
-      "evilness": 240, 
+      "evilness": 40, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "Gyro Drift", 
       "results": [
         {
-          "axis": "X", 
-          "duration": 14.829999923706055, 
-          "duration-units": "seconds", 
-          "evidence": [
-            "threshold-duration=0.500000", 
-            "threshold-duration-units=seconds", 
-            "max-delta=13.146075", 
-            "max-delta-units=degrees/second"
-          ], 
-          "evilness": 40, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Gyroscope readings differ from first gyroscope", 
-          "series": [
-            "IMU.GyrX", 
-            "IMU.GyrY", 
-            "IMU.GyrZ", 
-            "IMU2.GyrX", 
-            "IMU2.GyrY", 
-            "IMU2.GyrZ"
-          ], 
-          "severity-score": 40, 
-          "status": "FAIL", 
-          "timestamp_start": 239241000, 
-          "timestamp_stop": 254071000
-        }, 
-        {
           "axis": "Y", 
-          "duration": 14.930999755859375, 
+          "duration": 1.5099999904632568, 
           "duration-units": "seconds", 
           "evidence": [
             "threshold-duration=0.500000", 
             "threshold-duration-units=seconds", 
-            "max-delta=20.764882", 
-            "max-delta-units=degrees/second"
+            "max-delta=11.720762", 
+            "max-delta-units=degrees/second", 
+            "threshold=5.729578", 
+            "threshold-units=degrees/second"
           ], 
           "evilness": 40, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -3437,115 +3413,11 @@
           ], 
           "severity-score": 40, 
           "status": "FAIL", 
-          "timestamp_start": 239140000, 
-          "timestamp_stop": 254071000
-        }, 
-        {
-          "axis": "Z", 
-          "duration": 14.829999923706055, 
-          "duration-units": "seconds", 
-          "evidence": [
-            "threshold-duration=0.500000", 
-            "threshold-duration-units=seconds", 
-            "max-delta=13.142431", 
-            "max-delta-units=degrees/second"
-          ], 
-          "evilness": 40, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Gyroscope readings differ from first gyroscope", 
-          "series": [
-            "IMU.GyrX", 
-            "IMU.GyrY", 
-            "IMU.GyrZ", 
-            "IMU2.GyrX", 
-            "IMU2.GyrY", 
-            "IMU2.GyrZ"
-          ], 
-          "severity-score": 40, 
-          "status": "FAIL", 
-          "timestamp_start": 239241000, 
-          "timestamp_stop": 254071000
-        }, 
-        {
-          "axis": "X", 
-          "duration": 14.8100004196167, 
-          "duration-units": "seconds", 
-          "evidence": [
-            "threshold-duration=0.500000", 
-            "threshold-duration-units=seconds", 
-            "max-delta=9.128599", 
-            "max-delta-units=degrees/second"
-          ], 
-          "evilness": 40, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Gyroscope readings differ from first gyroscope", 
-          "series": [
-            "IMU.GyrX", 
-            "IMU.GyrY", 
-            "IMU.GyrZ", 
-            "IMU3.GyrX", 
-            "IMU3.GyrY", 
-            "IMU3.GyrZ"
-          ], 
-          "severity-score": 40, 
-          "status": "FAIL", 
-          "timestamp_start": 239261000, 
-          "timestamp_stop": 254071000
-        }, 
-        {
-          "axis": "Y", 
-          "duration": 14.930999755859375, 
-          "duration-units": "seconds", 
-          "evidence": [
-            "threshold-duration=0.500000", 
-            "threshold-duration-units=seconds", 
-            "max-delta=17.731014", 
-            "max-delta-units=degrees/second"
-          ], 
-          "evilness": 40, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Gyroscope readings differ from first gyroscope", 
-          "series": [
-            "IMU.GyrX", 
-            "IMU.GyrY", 
-            "IMU.GyrZ", 
-            "IMU3.GyrX", 
-            "IMU3.GyrY", 
-            "IMU3.GyrZ"
-          ], 
-          "severity-score": 40, 
-          "status": "FAIL", 
-          "timestamp_start": 239140000, 
-          "timestamp_stop": 254071000
-        }, 
-        {
-          "axis": "Z", 
-          "duration": 14.829999923706055, 
-          "duration-units": "seconds", 
-          "evidence": [
-            "threshold-duration=0.500000", 
-            "threshold-duration-units=seconds", 
-            "max-delta=8.076972", 
-            "max-delta-units=degrees/second"
-          ], 
-          "evilness": 40, 
-          "evilness-is-deprecated": "Use severity-score", 
-          "reason": "Gyroscope readings differ from first gyroscope", 
-          "series": [
-            "IMU.GyrX", 
-            "IMU.GyrY", 
-            "IMU.GyrZ", 
-            "IMU3.GyrX", 
-            "IMU3.GyrY", 
-            "IMU3.GyrZ"
-          ], 
-          "severity-score": 40, 
-          "status": "FAIL", 
-          "timestamp_start": 239241000, 
-          "timestamp_stop": 254071000
+          "timestamp_start": 239825000, 
+          "timestamp_stop": 241335000
         }
       ], 
-      "severity-score": 240, 
+      "severity-score": 40, 
       "status": "FAIL"
     }, 
     "Parameters": {
