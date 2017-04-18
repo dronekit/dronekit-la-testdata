@@ -1,0 +1,464 @@
+{
+  "bytes-dropped": 0, 
+  "duration": "987654321", 
+  "evilness": 83, 
+  "evilness-is-deprecated": "Use severity-score", 
+  "format-version": "0.1", 
+  "git_version": "some-hash", 
+  "maximum-altitude-absolute": 0.12999999523162842, 
+  "maximum-altitude-absolute-units": "metres", 
+  "maximum-altitude-relative": -1000, 
+  "maximum-altitude-relative-units": "metres", 
+  "maximum-distance-from-origin": 0, 
+  "maximum-distance-from-origin-units": "metres", 
+  "maximum-velocity": 0.07071067732840133, 
+  "maximum-velocity-units": "metres/second", 
+  "packet-count": 1254, 
+  "packet_count": 1254, 
+  "severity-score": 83, 
+  "tests": {
+    "Altitude Estimate Divergence": {
+      "description": "A UAV often has several estimates of its altitude.  This test will FAIL or WARN if the various vehicle's altitude estimates diverge.", 
+      "evilness": 20, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Altitude Estimate Divergence", 
+      "results": [
+        {
+          "duration": 20.228544235229492, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "max-delta=-17.130000 metres", 
+            "delta-threshold=5.000000 metres", 
+            "delta-time-threshold=0.500000 seconds"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "name": "GPS_RAW_INT", 
+          "reason": "This altitude estimate differs from the canonical craft altitude", 
+          "series": [
+            "GLOBAL_POSITION_INT.alt", 
+            "GPS_RAW_INT.alt"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 1457306280151652, 
+          "timestamp_stop": 1457306300380196
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "Any Parameters Seen": {
+      "description": "Autopilots store configuration settings known as 'parameters'. For proper analysis, logs must contain this parameter information. This test will FAIL if the input does not contain parameter information.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Any Parameters Seen", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Parameters seen", 
+          "series": [
+            "PARAM.param_id", 
+            "PARAM.value"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Arming Checks": {
+      "description": "An autopilot checks many aspects of the aircraft's state before allowing it to be armed - for example, that it has a good GPS fix.  This test will FAIL if the craft ever arms when some arming checks are disabled.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Arming Checks", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Attitude Control": {
+      "description": "The autopilot reports both the craft's attitude and the attitude the craft believes it should be at.  This test will FAIL or WARN if the vehicle's desired attitudes and achieved attitudes are not within threshold delta values for more than a threshold time.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Attitude Control", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Attitude Estimate Divergence": {
+      "description": "A UAV often has several estimates of its attitude.  This test will FAIL or WARN if the various vehicle's attitude estimates diverge.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Attitude Estimate Divergence", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "AutoPilot Health": {
+      "description": "Many autopilots are capable of monitoring their own performance.  This test will FAIL if problems are detected with the autopilot.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "AutoPilot Health", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Battery": {
+      "description": "Many autopilots are capable of monitoring their flight batteries.  This test will FAIL if the battery level falls below the battery failsafe threshold level, or if a battery failsafe event is received.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Battery", 
+      "results": [
+        {
+          "evidence": [
+            "battery-remaining=99.000000%", 
+            "failsafe=15.000000%"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Battery never below failsafe", 
+          "series": [
+            "SYS_STATUS.battery_remaining"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Compass Offsets": {
+      "description": "Compass calibration produces a set of parameters that specify expected compass discrepancies.  This test will WARN or FAIL depending on the degree that these compass offset parameters exceed specified thresholds.", 
+      "evilness": 7, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Compass Offsets", 
+      "results": [
+        {
+          "evidence": [
+            "COMPASS_OFS_X=-48.946243", 
+            "COMPASS_OFS_Y=-70.672218", 
+            "COMPASS_OFS_Z=54.992588", 
+            "COMPASS_OFS 102.051367 >= 100.000000"
+          ], 
+          "evilness": 2, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Compass offsets in parameters are out of bounds", 
+          "series": [
+            "PARAM.param_id", 
+            "PARAM.value"
+          ], 
+          "severity-score": 2, 
+          "status": "WARN", 
+          "timestamp": 1457306283665140
+        }, 
+        {
+          "evidence": [
+            "COMPASS_OFS2_X=-158.424149", 
+            "COMPASS_OFS2_Y=-106.935265", 
+            "COMPASS_OFS2_Z=-214.731125", 
+            "COMPASS_OFS2 287.476629 >= 200.000000"
+          ], 
+          "evilness": 5, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Compass offsets in parameters are out of bounds", 
+          "series": [
+            "PARAM.param_id", 
+            "PARAM.value"
+          ], 
+          "severity-score": 5, 
+          "status": "FAIL", 
+          "timestamp": 1457306284010260
+        }
+      ], 
+      "severity-score": 7, 
+      "status": "PASS"
+    }, 
+    "Compass Vector Length": {
+      "description": "The strength and direction of the Earth's magnetic field should be relatively constant and lie within certain thresholds.  This test will FAIL or WARN if the compass vector length exceeds the respective threshold.  Possible causes include flying near large metal objects.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Compass Vector Length", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Crash Test": {
+      "description": "Crashes are detected both heuristically and by explicit log messages.  This test will FAIL if the vehicle appears to crash.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Crash Test", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Never crashed", 
+          "series": [
+            "ATTITUDE.roll", 
+            "ATTITUDE.pitch", 
+            "ATTITUDE.yaw", 
+            "SERVO_OUTPUT_RAW.servo1_raw", 
+            "SERVO_OUTPUT_RAW.servo2_raw", 
+            "SERVO_OUTPUT_RAW.servo3_raw", 
+            "SERVO_OUTPUT_RAW.servo4_raw", 
+            "SERVO_OUTPUT_RAW.servo5_raw", 
+            "SERVO_OUTPUT_RAW.servo6_raw", 
+            "SERVO_OUTPUT_RAW.servo7_raw", 
+            "SERVO_OUTPUT_RAW.servo8_raw", 
+            "PARAM.param_id", 
+            "PARAM.value"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS", 
+          "timestamp": 0
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Ever Armed": {
+      "description": "Vehicles typically need to progress through a sequence of arming steps before they can move.  This test will FAIL if the craft did not arm.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Ever Armed", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "The vehicle never armed", 
+          "series": [
+            "HEARTBEAT.base_mode"
+          ], 
+          "severity-score": 0, 
+          "status": "FAIL", 
+          "timestamp-first-armed": 0
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "FAIL"
+    }, 
+    "Ever Flew": {
+      "description": "Determining whether a vehicle has ever flown in a log is done heuristically based on things like motor speeds.  This test will FAIL if the craft did not ever seem to fly.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Ever Flew", 
+      "results": [
+        {
+          "evidence": [
+            "Never Armed", 
+            "Servos never passed takeoff threshold"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "The vehicle never seemed to take off", 
+          "series": [
+            "HEARTBEAT.base_mode", 
+            "SERVO_OUTPUT_RAW.servo1_raw", 
+            "SERVO_OUTPUT_RAW.servo2_raw", 
+            "SERVO_OUTPUT_RAW.servo3_raw", 
+            "SERVO_OUTPUT_RAW.servo4_raw", 
+            "SERVO_OUTPUT_RAW.servo5_raw", 
+            "SERVO_OUTPUT_RAW.servo6_raw", 
+            "SERVO_OUTPUT_RAW.servo7_raw", 
+            "SERVO_OUTPUT_RAW.servo8_raw"
+          ], 
+          "severity-score": 0, 
+          "status": "FAIL", 
+          "timestamp-first-flying": 0
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "FAIL"
+    }, 
+    "FS Batt": {
+      "description": "A lower-limit may be specified for the the UAV battery voltage.  This test will FAIL if this value is not within a certain delta of the actual battery voltage.  This can happen e.g. if a craft is switched from running on 3S batteries to 4S batteries.", 
+      "evilness": 20, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "FS Batt", 
+      "results": [
+        {
+          "duration": 19.3863525390625, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "EXPECTED=14.000000", 
+            "ACTUAL=11.597000"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Parameter FS_BATT_VOLTAGE differs from actual voltage", 
+          "series": [
+            "PARAM.param_id", 
+            "PARAM.value", 
+            "SYS_STATUS.voltage_battery"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 1457306280993844, 
+          "timestamp_stop": 1457306300380196
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "GPS Fix": {
+      "description": "The accuracy and precision of GPS messages can vary depending on many factors including weather, ionospheric disturbances and number of satellites visible.  This test will FAIL if the quality of the GPS information is poor.", 
+      "evilness": 20, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "GPS Fix", 
+      "results": [
+        {
+          "duration": 20.23027992248535, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "satellites-visible: 0", 
+            "HDop: 99.99", 
+            "satellites-visible-threshold: 5", 
+            "HDop-threshold: 5.000000"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "No 3D fix was ever acquired", 
+          "series": [
+            "GPS_RAW_INT.satellites_visible", 
+            "GPS_RAW_INT.eph"
+          ], 
+          "severity-score": 20, 
+          "status": "FAIL", 
+          "timestamp_start": 1457306280149916, 
+          "timestamp_stop": 1457306300380196
+        }
+      ], 
+      "severity-score": 20, 
+      "status": "FAIL"
+    }, 
+    "Good EKF": {
+      "description": "The Extended Kalman Filter (EKF) has many built-in checks to ensure that it is functioning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
+      "evilness": 16, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Good EKF", 
+      "results": [
+        {
+          "duration": 20.22345542907715, 
+          "duration-units": "seconds", 
+          "evidence": [
+            "flags=165", 
+            "horizontal velocity estimate bad", 
+            "horizontal position (relative) estimate bad", 
+            "horizontal position (absolute) estimate bad", 
+            "vertical position (above ground) estimate bad", 
+            "Predicted horizontal position (relative) bad", 
+            "Predicted horizontal position (absolute) bad"
+          ], 
+          "evilness": 16, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "The EKF status report indicates a problem with the EKF", 
+          "series": [
+            "EKF_STATUS_REPORT.flags"
+          ], 
+          "severity-score": 16, 
+          "status": "FAIL", 
+          "timestamp_start": 1457306280156740, 
+          "timestamp_stop": 1457306300380196
+        }
+      ], 
+      "severity-score": 16, 
+      "status": "FAIL"
+    }, 
+    "Gyro Drift": {
+      "description": "Gyroscopes sometimes start to register movement where there is none.  This test will FAIL or WARN if the any gyroscope's average acceleration on any axis begins to drift.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Gyro Drift", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Position Estimate Divergence": {
+      "description": "A UAV often has several estimates of its position.  This test will FAIL or WARN if the various vehicle's position estimates diverge.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Position Estimate Divergence", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Sensor Health": {
+      "description": "A UAV can self-assess its sensors' health.  This test will FAIL if any sensor is detected as failed.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Sensor Health", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Truncated Log": {
+      "description": "A log should not end while the vehicle appears to be moving under its own power.  This test will FAIL if the vehicle still appears to be moving when the log ends.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Truncated Log", 
+      "results": [
+        {
+          "evidence": [
+            "Final altitude 0.090000 metres"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Log truncation not detected", 
+          "series": [
+            "SERVO_OUTPUT_RAW.servo1_raw", 
+            "SERVO_OUTPUT_RAW.servo2_raw", 
+            "SERVO_OUTPUT_RAW.servo3_raw", 
+            "SERVO_OUTPUT_RAW.servo4_raw", 
+            "SERVO_OUTPUT_RAW.servo5_raw", 
+            "SERVO_OUTPUT_RAW.servo6_raw", 
+            "SERVO_OUTPUT_RAW.servo7_raw", 
+            "SERVO_OUTPUT_RAW.servo8_raw", 
+            "GLOBAL_POSITION_INT.alt"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Vehicle Definition": {
+      "description": "The vehicle type is normally automatically detected by dronekit-la from the log.  Sometimes the log does not contain sufficient information to make this determination.  This test will FAIL if the craft type is never defined", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Vehicle Definition", 
+      "results": [
+        {
+          "evidence": [
+            "Copter"
+          ], 
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Vehicle was appropriately defined", 
+          "series": [
+            "STATUSTEXT.text"
+          ], 
+          "severity-score": 0, 
+          "status": "PASS"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }, 
+    "Velocity Estimate Divergence": {
+      "description": "A UAV often has several estimates of its velocity.  This test will FAIL or WARN if the various vehicle's velocity estimates diverge.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Velocity Estimate Divergence", 
+      "results": [], 
+      "severity-score": 0, 
+      "status": "PASS"
+    }
+  }, 
+  "timestamp": "123456789", 
+  "total-distance-travelled": 0, 
+  "total-distance-travelled-units": "metres", 
+  "total-flight-time": 0, 
+  "total-flight-time-units": "seconds"
+}
