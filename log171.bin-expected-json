@@ -1,7 +1,7 @@
 {
   "bytes-dropped": 0, 
   "duration": "987654321", 
-  "evilness": 1569, 
+  "evilness": 1627, 
   "evilness-is-deprecated": "Use severity-score", 
   "format-version": "0.1", 
   "git_version": "some-hash", 
@@ -11,11 +11,11 @@
   "maximum-altitude-relative-units": "metres", 
   "maximum-distance-from-origin": 82.98495461380755, 
   "maximum-distance-from-origin-units": "metres", 
-  "maximum-velocity": 14.62117776074582, 
+  "maximum-velocity": 14.621177673339844, 
   "maximum-velocity-units": "metres/second", 
   "packet-count": 91530, 
   "packet_count": 91530, 
-  "severity-score": 1569, 
+  "severity-score": 1627, 
   "tests": {
     "Altitude Estimate Divergence": {
       "description": "A UAV often has several estimates of its altitude.  This test will FAIL or WARN if the various vehicle's altitude estimates diverge.", 
@@ -1317,7 +1317,7 @@
             "COMPASS_OFS_X=-97.791557", 
             "COMPASS_OFS_Y=118.109573", 
             "COMPASS_OFS_Z=213.179993", 
-            "COMPASS_OFS 262.600011 >= 200.000000"
+            "COMPASS_OFS 262.600006 >= 200.000000"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1335,7 +1335,7 @@
             "COMPASS_OFS2_X=-141.843353", 
             "COMPASS_OFS2_Y=-67.991653", 
             "COMPASS_OFS2_Z=-255.968048", 
-            "COMPASS_OFS2 300.436427 >= 200.000000"
+            "COMPASS_OFS2 300.436432 >= 200.000000"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1364,7 +1364,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=577.585492"
+            "length-max=577.585510"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1385,7 +1385,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=785.871491"
+            "length-max=785.871521"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1406,7 +1406,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=553.174475"
+            "length-max=553.174500"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1427,7 +1427,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=580.107749"
+            "length-max=580.107727"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1448,7 +1448,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=798.535535"
+            "length-max=798.535522"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1469,7 +1469,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=565.916072"
+            "length-max=565.916077"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1490,7 +1490,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=565.574045"
+            "length-max=565.574036"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1511,7 +1511,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=595.031092"
+            "length-max=595.031067"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1532,7 +1532,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=569.477831"
+            "length-max=569.477844"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1553,7 +1553,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1076.558870"
+            "length-max=1076.558838"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1574,7 +1574,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1046.090818"
+            "length-max=1046.090820"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1595,7 +1595,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=722.735083"
+            "length-max=722.735107"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1616,7 +1616,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=577.256442"
+            "length-max=577.256470"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1637,7 +1637,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1143.700573"
+            "length-max=1143.700562"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1658,7 +1658,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=828.035627"
+            "length-max=828.035645"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1679,7 +1679,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=581.894320"
+            "length-max=581.894348"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1700,7 +1700,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=590.272818"
+            "length-max=590.272827"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1721,7 +1721,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=593.986532"
+            "length-max=593.986511"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1742,7 +1742,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=577.631370"
+            "length-max=577.631348"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1763,7 +1763,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1095.540506"
+            "length-max=1095.540527"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1784,7 +1784,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=573.970383"
+            "length-max=573.970398"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1805,7 +1805,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1163.646424"
+            "length-max=1163.646484"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1826,7 +1826,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=565.510389"
+            "length-max=565.510376"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1847,7 +1847,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1010.150979"
+            "length-max=1010.151001"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1868,7 +1868,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=555.386352"
+            "length-max=555.386353"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1910,7 +1910,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=632.407305"
+            "length-max=632.407288"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1931,7 +1931,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1336.587446"
+            "length-max=1336.587402"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1952,7 +1952,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=648.899068"
+            "length-max=648.899048"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -1973,7 +1973,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1242.592854"
+            "length-max=1242.592896"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2015,7 +2015,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=562.753054"
+            "length-max=562.753052"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2036,7 +2036,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=675.661158"
+            "length-max=675.661133"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2057,7 +2057,7 @@
           "evidence": [
             "threshold=550.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=577.226126"
+            "length-max=577.226135"
           ], 
           "evilness": 5, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2078,7 +2078,7 @@
           "evidence": [
             "threshold=600.000000", 
             "threshold-duration=0.250000 seconds", 
-            "length-max=1100.125902"
+            "length-max=1100.125854"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2095,9 +2095,9 @@
         }, 
         {
           "evidence": [
-            "shortest=409.909746", 
-            "longest=675.661158", 
-            "delta-percent=64.831689"
+            "shortest=409.909760", 
+            "longest=675.661133", 
+            "delta-percent=64.831677"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2112,9 +2112,9 @@
         }, 
         {
           "evidence": [
-            "shortest=375.154635", 
-            "longest=648.899068", 
-            "delta-percent=72.968426"
+            "shortest=375.154633", 
+            "longest=648.899048", 
+            "delta-percent=72.968422"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2129,9 +2129,9 @@
         }, 
         {
           "evidence": [
-            "shortest=171.257117", 
-            "longest=1336.587446", 
-            "delta-percent=680.456586"
+            "shortest=171.257111", 
+            "longest=1336.587402", 
+            "delta-percent=680.456588"
           ], 
           "evilness": 10, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2156,11 +2156,7 @@
       "results": [
         {
           "evidence": [
-            "ANGLE_MAX (fabs(39.599998) > 35.000000)", 
-            "SERVO_OUTPUT_RAW.servo1_raw=1497.000000", 
-            "SERVO_OUTPUT_RAW.servo2_raw=1534.000000", 
-            "SERVO_OUTPUT_RAW.servo3_raw=1455.000000", 
-            "SERVO_OUTPUT_RAW.servo4_raw=1446.000000"
+            "ANGLE_MAX (fabs(39.599998) > 35.000000)"
           ], 
           "evilness": 100, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2182,11 +2178,7 @@
         }, 
         {
           "evidence": [
-            "ANGLE_MAX (fabs(42.660000) > 35.000000)", 
-            "SERVO_OUTPUT_RAW.servo1_raw=1620.000000", 
-            "SERVO_OUTPUT_RAW.servo2_raw=1430.000000", 
-            "SERVO_OUTPUT_RAW.servo3_raw=1531.000000", 
-            "SERVO_OUTPUT_RAW.servo4_raw=1298.000000"
+            "ANGLE_MAX (fabs(42.660000) > 35.000000)"
           ], 
           "evilness": 100, 
           "evilness-is-deprecated": "Use severity-score", 
@@ -2208,6 +2200,32 @@
         }
       ], 
       "severity-score": 200, 
+      "status": "FAIL"
+    }, 
+    "Error Flags": {
+      "description": "A UAV can have ongoing errors which it is managing.  This test will fail if such errors occur", 
+      "evilness": 10, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Error Flags", 
+      "results": [
+        {
+          "duration": 2.61299991607666, 
+          "duration-units": "seconds", 
+          "ecode": 2, 
+          "ecode-string": "Bad Variance", 
+          "evilness": 10, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "A subsystem failure has occured", 
+          "series": [], 
+          "severity-score": 10, 
+          "status": "FAIL", 
+          "subsystem": 16, 
+          "subsystem-string": "EKFCHECK", 
+          "timestamp_start": 241885000, 
+          "timestamp_stop": 244498000
+        }
+      ], 
+      "severity-score": 10, 
       "status": "FAIL"
     }, 
     "Ever Armed": {
@@ -2311,7 +2329,7 @@
     }, 
     "Good EKF": {
       "description": "The Extended Kalman Filter (EKF) has many built-in checks to ensure that it is functioning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
-      "evilness": 544, 
+      "evilness": 527, 
       "evilness-is-deprecated": "Use severity-score", 
       "name": "Good EKF", 
       "results": [
@@ -2327,17 +2345,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 11478000, 
           "timestamp_stop": 14917000
@@ -2351,16 +2368,17 @@
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 16, 
+          "evilness": 17, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 16, 
+          "severity-score": 17, 
           "status": "FAIL", 
           "timestamp_start": 14917000, 
           "timestamp_stop": 21988000
@@ -2377,17 +2395,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 21988000, 
           "timestamp_stop": 26970000
@@ -2401,16 +2418,17 @@
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 16, 
+          "evilness": 17, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 16, 
+          "severity-score": 17, 
           "status": "FAIL", 
           "timestamp_start": 26970000, 
           "timestamp_stop": 31735000
@@ -2427,17 +2445,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 31735000, 
           "timestamp_stop": 35974000
@@ -2451,16 +2468,17 @@
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 16, 
+          "evilness": 17, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 16, 
+          "severity-score": 17, 
           "status": "FAIL", 
           "timestamp_start": 35974000, 
           "timestamp_stop": 39816000
@@ -2477,17 +2495,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 39816000, 
           "timestamp_stop": 46076000
@@ -2501,16 +2518,17 @@
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 16, 
+          "evilness": 17, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 16, 
+          "severity-score": 17, 
           "status": "FAIL", 
           "timestamp_start": 46076000, 
           "timestamp_stop": 49615000
@@ -2527,17 +2545,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 49615000, 
           "timestamp_stop": 50316000
@@ -2554,17 +2571,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 50316000, 
           "timestamp_stop": 56885000
@@ -2578,16 +2594,17 @@
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 16, 
+          "evilness": 17, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 16, 
+          "severity-score": 17, 
           "status": "FAIL", 
           "timestamp_start": 56885000, 
           "timestamp_stop": 61255000
@@ -2604,17 +2621,16 @@
             "horizontal position (absolute) estimate bad", 
             "vertical position (absolute) estimate bad", 
             "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)", 
             "Predicted horizontal position (relative) bad", 
             "Predicted horizontal position (absolute) bad"
           ], 
-          "evilness": 20, 
+          "evilness": 19, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 20, 
+          "severity-score": 19, 
           "status": "FAIL", 
           "timestamp_start": 61255000, 
           "timestamp_stop": 67671000
@@ -2627,15 +2643,16 @@
             "horizontal velocity estimate bad", 
             "horizontal position (relative) estimate bad", 
             "horizontal position (absolute) estimate bad", 
-            "vertical position (above ground) estimate bad"
+            "vertical position (above ground) estimate bad", 
+            "In constant position mode (no abs or rel position)"
           ], 
-          "evilness": 14, 
+          "evilness": 15, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 14, 
+          "severity-score": 15, 
           "status": "FAIL", 
           "timestamp_start": 67671000, 
           "timestamp_stop": 74688000
@@ -2645,16 +2662,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=2879", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 74688000, 
           "timestamp_stop": 84859000
@@ -2664,16 +2680,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=6975", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 84859000, 
           "timestamp_stop": 84960000
@@ -2683,16 +2698,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=2879", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 84960000, 
           "timestamp_stop": 85061000
@@ -2702,16 +2716,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 85061000, 
           "timestamp_stop": 85363000
@@ -2721,16 +2734,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 85363000, 
           "timestamp_stop": 85465000
@@ -2740,16 +2752,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 85465000, 
           "timestamp_stop": 161018000
@@ -2759,16 +2770,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 161018000, 
           "timestamp_stop": 161119000
@@ -2778,16 +2788,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 161119000, 
           "timestamp_stop": 163133000
@@ -2797,16 +2806,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 163133000, 
           "timestamp_stop": 163940000
@@ -2816,16 +2824,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 163940000, 
           "timestamp_stop": 164747000
@@ -2835,16 +2842,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 164747000, 
           "timestamp_stop": 165453000
@@ -2854,16 +2860,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 165453000, 
           "timestamp_stop": 165957000
@@ -2873,16 +2878,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=4927", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 165957000, 
           "timestamp_stop": 166562000
@@ -2952,16 +2956,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 166562000, 
           "timestamp_stop": 240894000
@@ -3165,16 +3168,15 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=17215", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 240894000, 
           "timestamp_stop": 249143000
@@ -3364,23 +3366,58 @@
           "duration-units": "seconds", 
           "evidence": [
             "flags=831", 
-            "vertical position (above ground) estimate bad", 
-            "In constant position mode (no abs or rel position)"
+            "vertical position (above ground) estimate bad"
           ], 
-          "evilness": 12, 
+          "evilness": 11, 
           "evilness-is-deprecated": "Use severity-score", 
           "reason": "The EKF status report indicates a problem with the EKF", 
           "series": [
             "EKF4.SS"
           ], 
-          "severity-score": 12, 
+          "severity-score": 11, 
           "status": "FAIL", 
           "timestamp_start": 249143000, 
           "timestamp_stop": 254071000
         }
       ], 
-      "severity-score": 544, 
+      "severity-score": 527, 
       "status": "FAIL"
+    }, 
+    "Good EKF2": {
+      "description": "ArduPilot's second Extended Kalman Filter (EKF2) has many built-in checks to ensure that it is functioning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Good EKF2", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "NKF flags were never updated", 
+          "series": [], 
+          "severity-score": 0, 
+          "status": "WARN"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "WARN"
+    }, 
+    "Good EKF3": {
+      "description": "ArduPilot's third Extended Kalman Filter (EKF3) has many built-in checks to ensure that it is functioning correctly.  This test will FAIL or WARN if EKF variances exceed the respective thresholds, or FAIL if the EKF status flags indicate errors.", 
+      "evilness": 0, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Good EKF3", 
+      "results": [
+        {
+          "evilness": 0, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "XKF flags were never updated", 
+          "series": [], 
+          "severity-score": 0, 
+          "status": "WARN"
+        }
+      ], 
+      "severity-score": 0, 
+      "status": "WARN"
     }, 
     "Gyro Drift": {
       "description": "Gyroscopes sometimes start to register movement where there is none.  This test will FAIL or WARN if the any gyroscope's average acceleration on any axis begins to drift.", 
@@ -3419,6 +3456,72 @@
       ], 
       "severity-score": 40, 
       "status": "FAIL"
+    }, 
+    "Motor Balance": {
+      "description": "Detects copter balance and twist issues", 
+      "evilness": 65, 
+      "evilness-is-deprecated": "Use severity-score", 
+      "name": "Motor Balance", 
+      "results": [
+        {
+          "evidence": [
+            "average-this-motor=1543", 
+            "average-all-motors=1476"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Imbalance detected on motor 2", 
+          "series": [
+            "RATE.R", 
+            "RATE.P", 
+            "RATE.Y", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4"
+          ], 
+          "severity-score": 20, 
+          "status": "WARN"
+        }, 
+        {
+          "evidence": [
+            "average-this-motor=1420", 
+            "average-all-motors=1476"
+          ], 
+          "evilness": 20, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Imbalance detected on motor 4", 
+          "series": [
+            "RATE.R", 
+            "RATE.P", 
+            "RATE.Y", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4"
+          ], 
+          "severity-score": 20, 
+          "status": "WARN"
+        }, 
+        {
+          "evilness": 25, 
+          "evilness-is-deprecated": "Use severity-score", 
+          "reason": "Imbalance detected in Yaw axis", 
+          "series": [
+            "RATE.R", 
+            "RATE.P", 
+            "RATE.Y", 
+            "RCOU.Ch1", 
+            "RCOU.Ch2", 
+            "RCOU.Ch3", 
+            "RCOU.Ch4"
+          ], 
+          "severity-score": 25, 
+          "status": "WARN"
+        }
+      ], 
+      "severity-score": 65, 
+      "status": "WARN"
     }, 
     "Parameters": {
       "description": "Autopilots store configuration settings known as 'parameters'. This test detects some common configuration issues present in these parameters.", 
@@ -3499,7 +3602,7 @@
       "results": [
         {
           "evidence": [
-            "Final altitude 593.229980 metres", 
+            "Final relative altitude 0.799988 metres", 
             "Takeoff altitude 592.429993 metres", 
             "Final relative altitude 0.799988 metres", 
             "Vehicle still flying", 
